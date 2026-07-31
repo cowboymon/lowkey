@@ -1,36 +1,48 @@
 import Image from "next/image";
 import Reveal from "./Reveal";
-import BenefitsOrbit from "./BenefitsOrbit";
 
 /**
- * "Why Low Key" — six claims radiating from a central product mark
- * (desktop: BenefitsOrbit) or a vertical spine echoing the same dot/line
- * motif (mobile/tablet, where the radial layout has no room to breathe).
+ * "Why Low Key" — restrained, editorial benefit callouts (lihmon-style:
+ * short bold claim lines with a sensory close-up image, no badges/icons).
+ * PLACEHOLDER imagery: licensed Pexels macros standing in for brand
+ * photography — one sensory image per claim, per the shot list.
  */
 const BENEFITS = [
   {
     label: "Full-body use",
     claim: "For pits, thighs, under boobs... wherever life gets a little sweaty.",
+    image: "/benefits/fullbody.jpg",
+    alt: "Sweat droplets beading on warm skin, close up",
   },
   {
     label: "pH balanced",
     claim: "Kind to the skin that's anything but ordinary.",
-  },
-  {
-    label: "24-hour odour control",
-    claim: "On the clock all 24 hours, so you never have to think about it.",
+    image: "/benefits/ph.jpg",
+    alt: "Milk drop hovering over a creamy ripple",
   },
   {
     label: "Microbiome supportive",
     claim: "Works with your skin. Not against it.",
+    image: "/benefits/microbiome.jpg",
+    alt: "Glassy bubbles in soft blue and green tones",
   },
   {
     label: "Dermatologist tested",
     claim: "Signed off by people in lab coats. Approved by actual skin.",
+    image: "/benefits/derm.jpg",
+    alt: "Clear droplets suspended on a light surface",
   },
   {
     label: "Aluminium free",
     claim: "No aluminium. No parabens. No second-guessing.",
+    image: "/benefits/aluminium.jpg",
+    alt: "Clear water splash crown on a light background",
+  },
+  {
+    label: "24-hour odour control",
+    claim: "On the clock all 24 hours, so you never have to think about it.",
+    image: "/benefits/odour.jpg",
+    alt: "Morning dew on grass backlit by golden sun",
   },
 ];
 
@@ -44,51 +56,28 @@ export default function Benefits() {
           </h2>
         </Reveal>
 
-        {/* desktop — radial orbit */}
-        <Reveal delay={0.1}>
-          <div className="mt-16 hidden lg:block">
-            <BenefitsOrbit claims={BENEFITS} />
-          </div>
-        </Reveal>
-
-        {/* mobile/tablet — vertical spine, same dot/line motif */}
-        <div className="mt-16 lg:hidden">
-          <div className="mx-auto flex h-24 w-24 items-center justify-center rounded-full bg-gradient-to-b from-butter to-blush shadow-md">
-            <Image
-              src="/brand/tilde-device.png"
-              alt="Low Key"
-              width={64}
-              height={64}
-              className="h-2/5 w-2/5 object-contain opacity-80"
-            />
-          </div>
-
-          <div className="relative mx-auto mt-12 max-w-md">
-            <span
-              aria-hidden
-              className="absolute left-[5px] top-3 bottom-3 w-px bg-periwinkle/40"
-            />
-            <ul className="space-y-8">
-              {BENEFITS.map((benefit, i) => (
-                <Reveal key={benefit.label} delay={i * 0.06}>
-                  <li className="flex gap-4">
-                    <span
-                      aria-hidden
-                      className="relative z-10 mt-1.5 h-2.5 w-2.5 flex-none rounded-full bg-cream ring-2 ring-periwinkle-deep"
-                    />
-                    <div>
-                      <p className="text-xs font-medium uppercase tracking-[0.25em] text-periwinkle-deep">
-                        {benefit.label}
-                      </p>
-                      <p className="mt-2 font-display text-xl leading-snug text-ink sm:text-2xl">
-                        {benefit.claim}
-                      </p>
-                    </div>
-                  </li>
-                </Reveal>
-              ))}
-            </ul>
-          </div>
+        <div className="mt-16 grid gap-x-10 gap-y-14 sm:grid-cols-2 lg:grid-cols-3">
+          {BENEFITS.map((benefit, i) => (
+            <Reveal key={benefit.label} delay={(i % 3) * 0.08}>
+              <div>
+                <div className="relative aspect-[4/3] overflow-hidden rounded-2xl">
+                  <Image
+                    src={benefit.image}
+                    alt={benefit.alt}
+                    fill
+                    sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
+                    className="object-cover"
+                  />
+                </div>
+                <p className="mt-6 text-xs font-medium uppercase tracking-[0.25em] text-periwinkle-deep">
+                  {benefit.label}
+                </p>
+                <p className="mt-3 font-display text-xl leading-snug text-ink sm:text-2xl">
+                  {benefit.claim}
+                </p>
+              </div>
+            </Reveal>
+          ))}
         </div>
       </div>
     </section>
