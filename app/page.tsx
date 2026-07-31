@@ -1,6 +1,5 @@
 import Nav from "@/components/Nav";
 import Hero from "@/components/Hero";
-import Problem from "@/components/Problem";
 import Benefits from "@/components/Benefits";
 import Ingredients from "@/components/Ingredients";
 import ProductShowcase from "@/components/ProductShowcase";
@@ -23,7 +22,6 @@ export default async function Home({
       <Nav />
       <main>
         <Hero />
-        <Problem />
         <Benefits />
         <Ingredients />
         <ProductShowcase />
