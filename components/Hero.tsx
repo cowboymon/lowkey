@@ -13,7 +13,7 @@ import Reveal from "./Reveal";
  */
 export default function Hero() {
   return (
-    <section id="top" className="relative mx-3 mt-3 overflow-hidden rounded-3xl sm:mx-5">
+    <section id="top" className="relative mx-3 overflow-hidden rounded-3xl sm:mx-5">
       {/* single continuous image behind both copy sections */}
       <Image
         src="/hero-skin.jpg"

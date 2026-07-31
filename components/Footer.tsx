@@ -45,15 +45,12 @@ export default function Footer({ source }: { source: string | null }) {
           <div className="grid gap-x-8 gap-y-12 lg:grid-cols-12">
             <div className="lg:col-span-3">
               <Image
-                src="/brand/logo-periwinkle.png"
-                alt="Low Key"
-                width={640}
-                height={127}
-                className="h-7 w-auto"
+                src="/brand/logo-stacked-periwinkle.png"
+                alt="Low Key — Bio-balanced. Body Ready."
+                width={500}
+                height={330}
+                className="w-36 sm:w-40"
               />
-              <p className="mt-4 text-sm leading-7 text-stone">
-                Bio-balanced. Body Ready. ~
-              </p>
             </div>
 
             {COLUMNS.map((column) => (
