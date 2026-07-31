@@ -29,7 +29,7 @@ export default async function Home({
         <WaitlistSection source={source} />
         <Faq />
       </main>
-      <Footer />
+      <Footer source={source} />
     </>
   );
 }

@@ -18,7 +18,7 @@ export default function WaitlistSection({ source }: { source: string | null }) {
           </h2>
         </Reveal>
         <Reveal delay={0.2}>
-          <div className="mx-auto mt-12 max-w-xl text-left">
+          <div className="mx-auto mt-20 max-w-xl text-left sm:mt-24">
             <WaitlistForm source={source} />
           </div>
         </Reveal>
