@@ -6,7 +6,13 @@ import { isValidEmail } from "@/lib/validation";
 
 const initialState: WaitlistState = { status: "idle", message: "" };
 
-export default function WaitlistForm({ source }: { source: string | null }) {
+export default function WaitlistForm({
+  source,
+  submitLabel = "Notify me",
+}: {
+  source: string | null;
+  submitLabel?: string;
+}) {
   const [state, formAction, pending] = useActionState(joinWaitlist, initialState);
   const [clientError, setClientError] = useState<string | null>(null);
 
@@ -67,7 +73,7 @@ export default function WaitlistForm({ source }: { source: string | null }) {
           disabled={pending}
           className="shrink-0 text-sm font-medium uppercase tracking-[0.2em] text-ink transition-colors hover:text-periwinkle-deep disabled:cursor-not-allowed disabled:opacity-60"
         >
-          {pending ? "Adding..." : "Notify me"}
+          {pending ? "Adding..." : submitLabel}
         </button>
       </div>
 

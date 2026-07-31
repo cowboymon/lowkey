@@ -71,12 +71,12 @@ export default function Footer({ source }: { source: string | null }) {
             ))}
 
             <div className="lg:col-span-5">
-              <p className="font-display text-xl text-ink">Low Key Post</p>
+              <p className="font-display text-xl text-ink">Keep Posted</p>
               <p className="mt-5 text-sm leading-7 text-stone">
-                Launch news and first-access perks, straight to your inbox.
+                Occasional updates. No perks, no pressure.
               </p>
               <div className="mt-6">
-                <WaitlistForm source={source} />
+                <WaitlistForm source={source} submitLabel="Subscribe" />
               </div>
             </div>
           </div>
