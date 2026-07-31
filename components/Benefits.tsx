@@ -16,17 +16,17 @@ const BENEFITS = [
   {
     label: "pH balanced",
     claim: "Kind to the skin that's anything but ordinary.",
-    tint: "bg-milk",
+    tint: "bg-periwinkle",
   },
   {
     label: "Microbiome supportive",
     claim: "Works with your skin. Not against it.",
-    tint: "bg-blush",
+    tint: "bg-blush-deep",
   },
   {
     label: "Dermatologist tested",
     claim: "Signed off by people in lab coats. Approved by actual skin.",
-    tint: "bg-blush",
+    tint: "bg-blush-deep",
   },
   {
     label: "Aluminium free",
@@ -36,7 +36,7 @@ const BENEFITS = [
   {
     label: "24-hour odour control",
     claim: "On the clock all 24 hours, so you never have to think about it.",
-    tint: "bg-milk",
+    tint: "bg-periwinkle",
   },
 ];
 
@@ -49,7 +49,7 @@ export default function Benefits() {
             Why Low Key
           </p>
           <h2 className="mt-4 max-w-2xl font-display text-4xl font-light leading-[1.08] tracking-tight sm:text-6xl">
-            Underarms were just <em className="font-normal">the beginning.</em>
+            Underarms were just <em className="font-normal text-periwinkle-deep">the beginning.</em>
           </h2>
         </Reveal>
 
@@ -63,7 +63,7 @@ export default function Benefits() {
                 <p className="mt-6 text-xs font-medium uppercase tracking-[0.25em] text-periwinkle-deep">
                   {benefit.label}
                 </p>
-                <p className="mt-3 font-display text-xl leading-snug text-espresso sm:text-2xl">
+                <p className="mt-3 font-display text-xl leading-snug text-ink sm:text-2xl">
                   {benefit.claim}
                 </p>
               </div>

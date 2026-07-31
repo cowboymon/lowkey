@@ -38,15 +38,15 @@ export default function WaitlistSection({ source }: { source: string | null }) {
             </p>
             <h2 className="mt-4 font-display text-4xl font-light leading-[1.08] tracking-tight sm:text-6xl">
               Your whole body deserves better.{" "}
-              <em className="font-normal">Get it first.</em>
+              <em className="font-normal text-periwinkle-deep">Get it first.</em>
             </h2>
           </Reveal>
           <div className="mt-12 space-y-8">
             {PERKS.map((perk, i) => (
               <Reveal key={perk.title} delay={i * 0.08}>
                 <div className="border-l-2 border-periwinkle pl-6">
-                  <h3 className="font-display text-xl text-espresso">{perk.title}</h3>
-                  <p className="mt-1 text-cocoa">{perk.copy}</p>
+                  <h3 className="font-display text-xl text-ink">{perk.title}</h3>
+                  <p className="mt-1 text-stone">{perk.copy}</p>
                 </div>
               </Reveal>
             ))}
@@ -54,7 +54,7 @@ export default function WaitlistSection({ source }: { source: string | null }) {
         </div>
         <Reveal delay={0.15} className="lg:pt-12">
           {/* the form card is a deliberate saturated moment */}
-          <div className="rounded-3xl bg-butter-deep p-6 shadow-[0_40px_80px_-40px_rgba(69,57,49,0.35)] sm:p-10">
+          <div className="rounded-3xl bg-butter-deep p-6 shadow-[0_40px_80px_-40px_rgba(44,40,36,0.35)] sm:p-10">
             <WaitlistForm source={source} />
           </div>
         </Reveal>

@@ -16,9 +16,9 @@ export default function ImageFrame({
 }) {
   return (
     <div
-      className={`relative flex ${ratio} items-center justify-center rounded-3xl border border-espresso/10 ${bg} ${className}`}
+      className={`relative flex ${ratio} items-center justify-center rounded-3xl border border-ink/10 ${bg} ${className}`}
     >
-      <span className="max-w-[70%] text-center text-xs uppercase tracking-[0.25em] leading-relaxed text-cocoa/60">
+      <span className="max-w-[70%] text-center text-xs uppercase tracking-[0.25em] leading-relaxed text-stone/60">
         {label}
       </span>
     </div>

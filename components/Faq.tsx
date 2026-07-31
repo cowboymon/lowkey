@@ -33,11 +33,11 @@ export default function Faq() {
             FAQ
           </p>
           <h2 className="mt-4 font-display text-4xl font-light leading-[1.08] tracking-tight sm:text-6xl">
-            Asking <em className="font-normal">for a friend.</em>
+            Asking <em className="font-normal text-periwinkle-deep">for a friend.</em>
           </h2>
         </Reveal>
 
-        <div className="mt-14 divide-y divide-espresso/10 border-y border-espresso/10">
+        <div className="mt-14 divide-y divide-ink/10 border-y border-ink/10">
           {FAQS.map((faq, i) => {
             const isOpen = open === i;
             return (
@@ -49,7 +49,7 @@ export default function Faq() {
                   aria-controls={`faq-panel-${i}`}
                   className="flex w-full items-center justify-between gap-6 py-6 text-left"
                 >
-                  <span className="font-display text-xl text-espresso sm:text-2xl">
+                  <span className="font-display text-xl text-ink sm:text-2xl">
                     {faq.q}
                   </span>
                   <span
@@ -68,7 +68,7 @@ export default function Faq() {
                   }`}
                 >
                   <div className="overflow-hidden">
-                    <p className="pb-6 leading-relaxed text-cocoa">{faq.a}</p>
+                    <p className="pb-6 leading-relaxed text-stone">{faq.a}</p>
                   </div>
                 </div>
               </div>

@@ -15,19 +15,19 @@ export default function Problem() {
       />
       <div className="mx-auto max-w-3xl text-center">
         <Reveal>
-          <h2 className="font-display text-4xl font-light leading-[1.1] tracking-tight text-espresso sm:text-6xl">
+          <h2 className="font-display text-4xl font-light leading-[1.1] tracking-tight text-ink sm:text-6xl">
             Some places sweat more than others.
           </h2>
         </Reveal>
         <Reveal delay={0.15}>
-          <p className="mx-auto mt-8 max-w-xl font-display text-xl italic leading-relaxed text-espresso/75 sm:text-2xl">
+          <p className="mx-auto mt-8 max-w-xl font-display text-xl italic leading-relaxed text-ink/75 sm:text-2xl">
             Traditional deodorant wasn&rsquo;t made for that.
             <br />
             Low Key was.
           </p>
         </Reveal>
         <Reveal delay={0.25}>
-          <p className="mt-10 text-sm uppercase tracking-[0.3em] text-espresso/50">
+          <p className="mt-10 text-sm uppercase tracking-[0.3em] text-ink/50">
             Not just underarms
           </p>
         </Reveal>

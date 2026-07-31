@@ -3,31 +3,31 @@
 @theme {
   /*
    * Brand palette — three colour families only (butter / periwinkle / blush),
-   * tied back to the logo assets + moodboard. Section backgrounds use the
-   * soft tints (tone-on-tone, "butter melting into skin"); the saturated
-   * steps are reserved for deliberate moments: buttons, CTAs, the form card.
-   * No invented in-between tones.
+   * sampled from the logo assets + packaging brief. Section backgrounds use
+   * soft tints (tone-on-tone, "butter melting into skin"); the full-strength
+   * colours land in deliberate moments: buttons, form card, benefit panels,
+   * headline emphasis. No off-palette tones.
    */
 
   /* periwinkle family (logo — locked) */
-  --color-periwinkle: #9eb8d8; /* Dusty Periwinkle */
-  --color-periwinkle-deep: #52719f; /* saturated moment — buttons/CTAs */
-  --color-periwinkle-ink: #34486a; /* dark blue text on blue tints */
+  --color-periwinkle: #9eb8d8; /* Dusty Periwinkle, full strength (assets) */
+  --color-periwinkle-deep: #52719f; /* darker ramp stop — hovers, em text */
+  --color-periwinkle-ink: #2b3c5e; /* darkest ramp stop — navy footer/text */
   --color-milk: #dbe5f1; /* soft periwinkle tint for backgrounds */
 
   /* butter family (hero colour) */
-  --color-butter: #fff1cd; /* Butter Yellow (from logo assets) */
-  --color-butter-deep: #ffe098; /* saturated moment — form card, accents */
+  --color-butter: #fff1cd; /* Butter Yellow, full strength (assets) */
+  --color-butter-deep: #ffe098; /* darker ramp stop — form card */
   --color-butter-soft: #fbf3dd; /* soft butter wash */
 
   /* blush family (skin tone, from packaging brief) */
   --color-blush: #f6ddc9; /* soft blush tint for backgrounds */
-  --color-blush-deep: #eec3a4; /* saturated blush moment */
+  --color-blush-deep: #eec3a4; /* fuller blush — accent panels */
 
   /* neutrals */
   --color-cream: #fdfaf2; /* crisp warm-white page background */
-  --color-espresso: #453931; /* warm dark brown text (no black) */
-  --color-cocoa: #6f5f52; /* soft warm secondary text */
+  --color-ink: #2c2824; /* near-black text (no brown cast) */
+  --color-stone: #6d675f; /* soft secondary text */
 
   --font-display: var(--font-fraunces), Georgia, serif;
   --font-body: var(--font-figtree), system-ui, sans-serif;
@@ -39,7 +39,7 @@ html {
 
 body {
   background-color: var(--color-cream);
-  color: var(--color-espresso);
+  color: var(--color-ink);
   font-family: var(--font-body);
   -webkit-font-smoothing: antialiased;
 }

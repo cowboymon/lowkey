@@ -19,12 +19,12 @@ const INGREDIENTS = [
   {
     name: "Soothing botanicals",
     copy: "Calms and conditions skin that moves, rubs and sweats — gentle enough for the most sensitive places.",
-    tint: "bg-blush",
+    tint: "bg-blush-deep",
   },
   {
     name: "pH-balancing acids",
     copy: "Keeps skin at its happy, slightly-acidic best — where odour struggles and your barrier thrives.",
-    tint: "bg-milk",
+    tint: "bg-periwinkle",
   },
 ];
 
@@ -37,7 +37,7 @@ export default function Ingredients() {
             How it works
           </p>
           <h2 className="mt-4 max-w-2xl font-display text-4xl font-light leading-[1.08] tracking-tight sm:text-6xl">
-            Science, but make it <em className="font-normal">gentle.</em>
+            Science, but make it <em className="font-normal text-periwinkle-deep">gentle.</em>
           </h2>
         </Reveal>
 
@@ -49,13 +49,13 @@ export default function Ingredients() {
               >
                 {/* PLACEHOLDER: macro ingredient photograph goes here
                     (absolute-fill next/image behind the text) */}
-                <span className="absolute right-5 top-5 text-[0.6rem] uppercase tracking-[0.2em] text-espresso/40">
+                <span className="absolute right-5 top-5 text-[0.6rem] uppercase tracking-[0.2em] text-ink/40">
                   Ingredient imagery coming soon
                 </span>
-                <h3 className="font-display text-2xl font-light leading-tight text-espresso sm:text-3xl">
+                <h3 className="font-display text-2xl font-light leading-tight text-ink sm:text-3xl">
                   {ingredient.name}
                 </h3>
-                <p className="mt-3 text-sm leading-relaxed text-espresso/75 sm:text-base">
+                <p className="mt-3 text-sm leading-relaxed text-ink/75 sm:text-base">
                   {ingredient.copy}
                 </p>
               </article>
@@ -64,7 +64,7 @@ export default function Ingredients() {
         </div>
 
         <Reveal delay={0.2}>
-          <p className="mt-8 text-xs uppercase tracking-[0.2em] text-cocoa/60">
+          <p className="mt-8 text-xs uppercase tracking-[0.2em] text-stone/60">
             Placeholder ingredient stories — final formula copy to come
           </p>
         </Reveal>
