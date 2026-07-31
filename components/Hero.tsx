@@ -8,7 +8,7 @@ import HeroReveal from "./HeroReveal";
  * grayscale by default; hovering erodes the grayscale in a soft trailing
  * blob to reveal the colour photo underneath (see HeroReveal).
  *
- * PLACEHOLDER imagery: licensed stock stand-in (Pexels, free licence)
+ * PLACEHOLDER imagery: Unsplash stand-in (Monika Kozub, free licence)
  * matching the approved art direction — swap src for the brand's own
  * campaign photograph when the shoot happens.
  */
@@ -20,7 +20,9 @@ export default function Hero() {
           cursor-tracking container underneath */}
       <HeroReveal
         src="/hero-color.jpg"
-        alt="Sweat beading on the bare skin of a shoulder and back"
+        alt="Close crop of hip and thigh, full-body skin texture"
+        focalX={65}
+        focalY={20}
       >
         {/* legibility scrim: one continuous gradient, darker under each copy
             beat, no hard edges */}

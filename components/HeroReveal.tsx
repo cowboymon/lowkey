@@ -14,10 +14,17 @@ type CoverRect = { sx: number; sy: number; sw: number; sh: number };
 export default function HeroReveal({
   src,
   alt,
+  focalX = 50,
+  focalY = 20,
   children,
 }: {
   src: string;
   alt: string;
+  /** object-position, as percentages — must match between the base <img>
+   * and the canvas's own crop math, or the grayscale layer and the colour
+   * layer underneath it will show different framing. */
+  focalX?: number;
+  focalY?: number;
   children?: ReactNode;
 }) {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -58,20 +65,13 @@ export default function HeroReveal({
       if (img.naturalWidth) {
         const iw = img.naturalWidth;
         const ih = img.naturalHeight;
-        const containerRatio = cw / ch;
-        const imgRatio = iw / ih;
-        let sw: number, sh: number, sx: number, sy: number;
-        if (imgRatio > containerRatio) {
-          sh = ih;
-          sw = ih * containerRatio;
-          sx = (iw - sw) / 2;
-          sy = 0;
-        } else {
-          sw = iw;
-          sh = iw / containerRatio;
-          sx = 0;
-          sy = (ih - sh) / 2;
-        }
+        // Mirrors the CSS object-fit:cover + object-position algorithm so
+        // the canvas crop lines up exactly with the <img> underneath it.
+        const scale = Math.max(cw / iw, ch / ih);
+        const sw = cw / scale;
+        const sh = ch / scale;
+        const sx = (iw - sw) * (focalX / 100);
+        const sy = (ih - sh) * (focalY / 100);
         coverRect = { sx, sy, sw, sh };
       }
     }
@@ -164,7 +164,7 @@ export default function HeroReveal({
       container.removeEventListener("mousemove", handleMouseMove);
       container.removeEventListener("mouseleave", handleMouseLeave);
     };
-  }, []);
+  }, [focalX, focalY]);
 
   return (
     <div ref={containerRef} className="relative cursor-none">
@@ -175,7 +175,8 @@ export default function HeroReveal({
         alt={alt}
         fetchPriority="high"
         decoding="async"
-        className="absolute inset-0 -z-10 h-full w-full object-cover object-[50%_20%]"
+        className="absolute inset-0 -z-10 h-full w-full object-cover"
+        style={{ objectPosition: `${focalX}% ${focalY}%` }}
       />
       <canvas ref={canvasRef} className="absolute inset-0 -z-10 h-full w-full" />
       <div
