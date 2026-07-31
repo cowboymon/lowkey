@@ -3,8 +3,9 @@ import Reveal from "./Reveal";
 
 export default function Philosophy() {
   return (
-    <section className="bg-milk px-5 py-32 sm:px-8 sm:py-44">
-      <div className="mx-auto max-w-3xl text-center">
+    <section className="px-3 sm:px-5">
+      <div className="rounded-3xl bg-milk px-5 py-28 sm:px-8 sm:py-40">
+        <div className="mx-auto max-w-3xl text-center">
         <Reveal>
           <blockquote className="font-display text-3xl font-light leading-[1.25] tracking-tight text-periwinkle-ink sm:text-5xl">
             &ldquo;No one should have to choose between products that{" "}
@@ -22,6 +23,7 @@ export default function Philosophy() {
             className="mx-auto mt-12 w-32 opacity-90 sm:w-36"
           />
         </Reveal>
+        </div>
       </div>
     </section>
   );

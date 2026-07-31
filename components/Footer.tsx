@@ -2,8 +2,9 @@ import Image from "next/image";
 
 export default function Footer() {
   return (
-    <footer className="bg-butter px-5 pb-10 pt-16 text-ink sm:px-8">
-      <div className="mx-auto max-w-6xl">
+    <footer className="px-3 pb-3 pt-6 text-ink sm:px-5">
+      <div className="rounded-3xl bg-butter px-5 pb-10 pt-16 sm:px-8">
+        <div className="mx-auto max-w-6xl">
         <div className="flex flex-col items-start justify-between gap-10 sm:flex-row sm:items-center">
           <Image
             src="/brand/logo-periwinkle.png"
@@ -36,6 +37,7 @@ export default function Footer() {
         <div className="mt-10 flex flex-col gap-2 border-t border-ink/10 pt-6 text-xs text-stone/80 sm:flex-row sm:items-center sm:justify-between">
           <p>© {new Date().getFullYear()} Low Key. All rights reserved.</p>
           <p>Bio-balanced. Body Ready. ~</p>
+          </div>
         </div>
       </div>
     </footer>

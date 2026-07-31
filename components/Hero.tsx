@@ -13,7 +13,7 @@ import Reveal from "./Reveal";
  */
 export default function Hero() {
   return (
-    <section id="top" className="relative overflow-hidden">
+    <section id="top" className="relative mx-3 mt-3 overflow-hidden rounded-3xl sm:mx-5">
       {/* single continuous image behind both copy sections */}
       <Image
         src="/hero-skin.jpg"
@@ -35,8 +35,8 @@ export default function Hero() {
       />
 
       {/* beat one — hero */}
-      <div className="flex min-h-svh flex-col justify-end">
-        <div className="mx-auto w-full max-w-6xl px-5 pb-16 pt-40 sm:px-8 sm:pb-24">
+      <div className="flex min-h-[88svh] flex-col justify-end">
+        <div className="mx-auto w-full max-w-6xl px-5 pb-16 pt-32 sm:px-8 sm:pb-24">
           <Reveal>
             <p className="mb-5 text-sm font-medium uppercase tracking-[0.3em] text-butter">
               Bio-balanced. Body Ready.

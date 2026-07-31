@@ -6,8 +6,9 @@ export default function ProductShowcase() {
   const products = getProducts();
 
   return (
-    <section id="product" className="bg-butter-soft px-5 py-28 sm:px-8 sm:py-36">
-      <div className="mx-auto max-w-6xl">
+    <section id="product" className="px-3 sm:px-5">
+      <div className="rounded-3xl bg-butter-soft px-5 py-24 sm:px-8 sm:py-32">
+        <div className="mx-auto max-w-6xl">
         <Reveal>
           <p className="text-sm font-medium uppercase tracking-[0.3em] text-periwinkle-deep">
             The Product
@@ -41,6 +42,7 @@ export default function ProductShowcase() {
               </article>
             </Reveal>
           ))}
+          </div>
         </div>
       </div>
     </section>

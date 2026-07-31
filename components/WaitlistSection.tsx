@@ -22,15 +22,9 @@ const PERKS = [
 
 export default function WaitlistSection({ source }: { source: string | null }) {
   return (
-    <section
-      id="waitlist"
-      className="relative scroll-mt-16 overflow-hidden px-5 py-28 sm:px-8 sm:py-36"
-    >
-      <div
-        aria-hidden
-        className="absolute inset-0 -z-10 bg-gradient-to-b from-cream to-butter-soft"
-      />
-      <div className="mx-auto grid max-w-6xl gap-14 lg:grid-cols-2 lg:gap-24">
+    <section id="waitlist" className="scroll-mt-28 px-3 sm:px-5">
+      <div className="rounded-3xl bg-butter-soft px-5 py-24 sm:px-8 sm:py-32">
+        <div className="mx-auto grid max-w-6xl gap-14 lg:grid-cols-2 lg:gap-24">
         <div>
           <Reveal>
             <p className="text-sm font-medium uppercase tracking-[0.3em] text-periwinkle-deep">
@@ -58,6 +52,7 @@ export default function WaitlistSection({ source }: { source: string | null }) {
             <WaitlistForm source={source} />
           </div>
         </Reveal>
+        </div>
       </div>
     </section>
   );

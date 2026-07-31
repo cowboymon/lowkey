@@ -1,10 +1,34 @@
 import Image from "next/image";
 
+/**
+ * Retail-style nav mocked as launch-ready (Rhode reference): announcement
+ * bar, then a block bar with menu left, centred logo, account/cart right.
+ * Shop / Search / Account / Cart are non-functional placeholders until the
+ * Shopify storefront exists.
+ */
 export default function Nav() {
   return (
-    <header className="fixed inset-x-0 top-0 z-50 bg-cream/75 backdrop-blur-md">
-      <nav className="mx-auto flex max-w-6xl items-center justify-between px-5 py-4 sm:px-8">
-        <a href="#top" aria-label="Low Key — back to top">
+    <header className="sticky top-0 z-50 bg-cream/95 px-3 pt-3 backdrop-blur-sm sm:px-5">
+      <p className="rounded-t-2xl bg-butter py-2 text-center text-xs font-medium uppercase tracking-[0.2em] text-ink">
+        Launching soon — founding members get first access
+      </p>
+      <nav
+        aria-label="Main"
+        className="grid grid-cols-[1fr_auto_1fr] items-center rounded-b-2xl bg-periwinkle-ink px-5 py-4 sm:px-8"
+      >
+        <div className="flex items-center gap-5 text-xs font-medium uppercase tracking-[0.15em] text-cream/90 sm:gap-8 sm:text-sm">
+          <a href="#product" className="transition-colors hover:text-butter">
+            Shop
+          </a>
+          <a href="#why" className="hidden transition-colors hover:text-butter sm:inline">
+            About
+          </a>
+          <a href="#waitlist" className="transition-colors hover:text-butter">
+            Waitlist
+          </a>
+        </div>
+
+        <a href="#top" aria-label="Low Key — back to top" className="px-3">
           <Image
             src="/brand/logo-periwinkle.png"
             alt="Low Key"
@@ -14,12 +38,18 @@ export default function Nav() {
             priority
           />
         </a>
-        <a
-          href="#waitlist"
-          className="rounded-full bg-periwinkle-deep px-4 py-2 text-sm font-medium tracking-wide text-cream transition-colors hover:bg-periwinkle-ink sm:text-base"
-        >
-          Join the Waitlist
-        </a>
+
+        <div className="flex items-center justify-end gap-5 text-xs font-medium uppercase tracking-[0.15em] text-cream/90 sm:gap-8 sm:text-sm">
+          <a href="#" aria-disabled className="hidden transition-colors hover:text-butter sm:inline">
+            Search
+          </a>
+          <a href="#" aria-disabled className="hidden transition-colors hover:text-butter sm:inline">
+            Account
+          </a>
+          <a href="#" aria-disabled className="whitespace-nowrap transition-colors hover:text-butter">
+            Cart (0)
+          </a>
+        </div>
       </nav>
     </header>
   );
