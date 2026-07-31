@@ -21,7 +21,7 @@ export default function Hero() {
         fill
         priority
         sizes="100vw"
-        className="-z-10 object-cover object-[50%_35%] saturate-[1.15]"
+        className="-z-10 object-cover object-[50%_35%] grayscale"
       />
       {/* legibility scrim: one continuous gradient, darker under each copy
           beat, no hard edges */}
