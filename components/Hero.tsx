@@ -21,7 +21,7 @@ export default function Hero() {
         fill
         priority
         sizes="100vw"
-        className="-z-10 object-cover object-[50%_35%] grayscale"
+        className="-z-10 object-cover object-[50%_20%] grayscale"
       />
       {/* legibility scrim: one continuous gradient, darker under each copy
           beat, no hard edges */}
@@ -31,7 +31,7 @@ export default function Hero() {
       />
 
       {/* beat one — hero */}
-      <div className="flex min-h-[88svh] flex-col justify-end">
+      <div className="flex min-h-[75svh] flex-col justify-end sm:min-h-[85svh]">
         <div className="mx-auto w-full max-w-6xl px-5 pb-24 pt-32 sm:px-8 sm:pb-36">
           <Reveal>
             <p className="mb-5 text-sm font-medium uppercase tracking-[0.3em] text-white [text-shadow:0_1px_12px_rgba(29,28,26,0.5)]">

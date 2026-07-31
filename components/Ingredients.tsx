@@ -42,12 +42,12 @@ export default function Ingredients() {
           </h2>
         </Reveal>
 
-        {/* three columns at every breakpoint (lihmon reference) — cards go
-            tall and narrow on mobile rather than stacking */}
+        {/* three columns at every breakpoint (lihmon reference) — cards stay
+            tall and narrow at every breakpoint rather than squaring off */}
         <div className="mt-12 grid grid-cols-3 gap-2.5 sm:mt-16 sm:gap-6">
           {INGREDIENTS.map((ingredient, i) => (
             <Reveal key={ingredient.name} delay={i * 0.1}>
-              <article className="relative flex aspect-[10/29] flex-col justify-end overflow-hidden rounded-2xl p-3 sm:aspect-[2/3] sm:rounded-3xl sm:p-8">
+              <article className="relative flex aspect-[10/29] flex-col justify-end overflow-hidden rounded-2xl p-3 sm:aspect-[3/5] sm:rounded-3xl sm:p-6 lg:aspect-[9/16] lg:p-8">
                 <Image
                   src={ingredient.image}
                   alt={ingredient.alt}
@@ -60,22 +60,16 @@ export default function Ingredients() {
                   aria-hidden
                   className="absolute inset-0 -z-10 bg-gradient-to-t from-ink/60 via-ink/15 to-transparent"
                 />
-                <h3 className="font-display text-[0.8rem] font-light uppercase leading-[1.25] text-white sm:text-3xl sm:tracking-wide">
+                <h3 className="font-display text-[0.8rem] font-light uppercase leading-[1.25] text-white sm:text-2xl sm:tracking-wide lg:text-3xl">
                   {ingredient.name}
                 </h3>
-                <p className="mt-2 text-[0.7rem] leading-snug text-white/90 sm:mt-3 sm:text-base sm:leading-relaxed">
+                <p className="mt-2 text-[0.7rem] leading-snug text-white/90 sm:mt-3 sm:text-sm sm:leading-snug lg:text-base lg:leading-relaxed">
                   {ingredient.copy}
                 </p>
               </article>
             </Reveal>
           ))}
         </div>
-
-        <Reveal delay={0.2}>
-          <p className="mt-8 text-xs uppercase tracking-[0.2em] text-stone/60">
-            Placeholder imagery &amp; ingredient stories — final formula to come
-          </p>
-        </Reveal>
       </div>
     </section>
   );
