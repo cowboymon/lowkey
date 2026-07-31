@@ -34,7 +34,7 @@ export default function Hero() {
       <div className="flex min-h-[88svh] flex-col justify-end">
         <div className="mx-auto w-full max-w-6xl px-5 pb-16 pt-32 sm:px-8 sm:pb-24">
           <Reveal>
-            <p className="mb-5 text-sm font-medium uppercase tracking-[0.3em] text-butter">
+            <p className="mb-5 text-sm font-medium uppercase tracking-[0.3em] text-white [text-shadow:0_1px_12px_rgba(29,28,26,0.5)]">
               Bio-balanced. Body Ready.
             </p>
           </Reveal>
@@ -50,16 +50,13 @@ export default function Hero() {
             </p>
           </Reveal>
           <Reveal delay={0.3}>
-            <div className="mt-9 flex flex-wrap items-center gap-5">
+            <div className="mt-9">
               <a
                 href="#waitlist"
-                className="rounded-full bg-periwinkle-deep px-7 py-3 text-base font-medium tracking-wide text-cream transition-colors hover:bg-periwinkle-ink"
+                className="inline-block rounded-full bg-butter px-9 py-4 text-lg font-semibold tracking-wide text-ink transition-colors hover:bg-periwinkle hover:text-periwinkle-ink"
               >
                 Join the Waitlist
               </a>
-              <span className="text-sm text-cream/70">
-                Launching soon
-              </span>
             </div>
           </Reveal>
         </div>
