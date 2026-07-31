@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://lowkey.example.com"),
   title: "Low Key — Full-Body Deodorant for Sensitive Skin | Join the Waitlist",
   description:
-    "Not everything that sweats wears deodorant. Low Key is the full-body deodorant made for your most sensitive skin — pH balanced, microbiome supportive, aluminium free. Join the founding member waitlist.",
+    "Not everything that sweats wears deodorant. Low Key is the full-body deodorant made for your most sensitive skin — pH balanced, microbiome supportive, aluminium free. Join the waitlist for first access.",
   openGraph: {
     title: "Low Key — Bio-balanced. Body Ready.",
     description:

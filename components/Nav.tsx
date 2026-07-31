@@ -10,7 +10,7 @@ export default function Nav() {
   return (
     <header className="sticky top-0 z-50 bg-cream/95 px-3 pt-3 backdrop-blur-sm sm:px-5">
       <p className="rounded-t-2xl bg-butter py-2 text-center text-xs font-medium uppercase tracking-[0.2em] text-ink">
-        Launching soon — founding members get first access
+        Launching soon — the waitlist gets everything first
       </p>
       <nav
         aria-label="Main"

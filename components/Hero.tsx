@@ -62,7 +62,7 @@ export default function Hero() {
                 Join the Waitlist
               </a>
               <span className="text-sm text-cream/70">
-                Launching soon · founding members first
+                Launching soon
               </span>
             </div>
           </Reveal>

@@ -8,10 +8,10 @@ const PERKS = [
   },
   {
     title: "Exclusive launch pricing",
-    copy: "Founding members pay less. That's the whole perk. It's a good one.",
+    copy: "Waitlist members pay less at launch. That's the whole perk. It's a good one.",
   },
   {
-    title: "Founding member updates",
+    title: "Insider updates",
     copy: "The behind-the-scenes stuff — formulas, launch dates, honest chaos.",
   },
   {
@@ -23,16 +23,15 @@ const PERKS = [
 export default function WaitlistSection({ source }: { source: string | null }) {
   return (
     <section id="waitlist" className="scroll-mt-28 px-3 sm:px-5">
-      <div className="rounded-3xl bg-butter-soft px-5 py-24 sm:px-8 sm:py-32">
+      <div className="rounded-3xl bg-butter px-5 py-24 sm:px-8 sm:py-32">
         <div className="mx-auto grid max-w-6xl gap-14 lg:grid-cols-2 lg:gap-24">
         <div>
           <Reveal>
             <p className="text-sm font-medium uppercase tracking-[0.3em] text-periwinkle-deep">
-              Founding Member Waitlist
+              The Waitlist
             </p>
             <h2 className="mt-4 font-display text-4xl font-light leading-[1.08] tracking-tight sm:text-6xl">
-              Your whole body deserves better.{" "}
-              <em className="font-normal">Get it first.</em>
+              Your whole body deserves better. Get it first.
             </h2>
           </Reveal>
           <div className="mt-12 space-y-8">
@@ -48,7 +47,7 @@ export default function WaitlistSection({ source }: { source: string | null }) {
         </div>
         <Reveal delay={0.15} className="lg:pt-12">
           {/* the form card is a deliberate saturated moment */}
-          <div className="rounded-3xl bg-butter-deep p-6 shadow-[0_40px_80px_-40px_rgba(44,40,36,0.35)] sm:p-10">
+          <div className="rounded-3xl bg-white p-6 shadow-[0_40px_80px_-40px_rgba(29,28,26,0.25)] sm:p-10">
             <WaitlistForm source={source} />
           </div>
         </Reveal>

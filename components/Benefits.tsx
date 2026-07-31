@@ -11,32 +11,32 @@ const BENEFITS = [
   {
     label: "Full-body use",
     claim: "For pits, thighs, under boobs... wherever life gets a little sweaty.",
-    tint: "bg-butter",
+    tint: "bg-periwinkle",
   },
   {
     label: "pH balanced",
     claim: "Kind to the skin that's anything but ordinary.",
-    tint: "bg-milk",
+    tint: "bg-butter",
   },
   {
     label: "Microbiome supportive",
     claim: "Works with your skin. Not against it.",
-    tint: "bg-blush",
+    tint: "bg-periwinkle",
   },
   {
     label: "Dermatologist tested",
     claim: "Signed off by people in lab coats. Approved by actual skin.",
-    tint: "bg-blush",
+    tint: "bg-butter",
   },
   {
     label: "Aluminium free",
     claim: "No aluminium. No parabens. No second-guessing.",
-    tint: "bg-butter",
+    tint: "bg-periwinkle",
   },
   {
     label: "24-hour odour control",
     claim: "On the clock all 24 hours, so you never have to think about it.",
-    tint: "bg-milk",
+    tint: "bg-butter",
   },
 ];
 
@@ -49,7 +49,7 @@ export default function Benefits() {
             Why Low Key
           </p>
           <h2 className="mt-4 max-w-2xl font-display text-4xl font-light leading-[1.08] tracking-tight sm:text-6xl">
-            Underarms were just <em className="font-normal">the beginning.</em>
+            Underarms were just the beginning.
           </h2>
         </Reveal>
 

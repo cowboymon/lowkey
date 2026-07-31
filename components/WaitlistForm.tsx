@@ -89,7 +89,7 @@ export default function WaitlistForm({ source }: { source: string | null }) {
       </button>
 
       <p className="text-center text-xs text-ink/60">
-        No spam, no oversharing. Just launch news and founding-member perks.
+        No spam, no oversharing. Just launch news and first-access perks.
       </p>
     </form>
   );

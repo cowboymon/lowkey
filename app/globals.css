@@ -25,9 +25,9 @@
   --color-blush-deep: #eec3a4; /* fuller blush — accent panels */
 
   /* neutrals */
-  --color-cream: #fdfaf2; /* crisp warm-white page background */
-  --color-ink: #2c2824; /* near-black text (no brown cast) */
-  --color-stone: #6d675f; /* soft secondary text */
+  --color-cream: #fbfbf8; /* clean near-white page background */
+  --color-ink: #1d1c1a; /* near-black text */
+  --color-stone: #61605c; /* neutral secondary text */
 
   --font-display: var(--font-fraunces), Georgia, serif;
   --font-body: var(--font-figtree), system-ui, sans-serif;

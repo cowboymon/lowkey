@@ -7,25 +7,24 @@ export default function ProductShowcase() {
 
   return (
     <section id="product" className="px-3 sm:px-5">
-      <div className="rounded-3xl bg-butter-soft px-5 py-24 sm:px-8 sm:py-32">
+      <div className="px-2 py-24 sm:py-32">
         <div className="mx-auto max-w-6xl">
         <Reveal>
           <p className="text-sm font-medium uppercase tracking-[0.3em] text-periwinkle-deep">
             The Product
           </p>
           <h2 className="mt-4 max-w-2xl font-display text-4xl font-light leading-[1.08] tracking-tight sm:text-6xl">
-            We made deodorant for <em className="font-normal">the rest of you.</em>
+            We made deodorant for the rest of you.
           </h2>
           <p className="mt-5 max-w-xl text-lg text-stone">
-            One stick, two moods. Coming soon&nbsp;— founding members get to it
-            first.
+            One stick, two moods. Coming soon&nbsp;— the waitlist gets it first.
           </p>
         </Reveal>
 
         <div className="mt-16 grid gap-10 sm:grid-cols-2">
           {products.map((product, i) => (
             <Reveal key={product.id} delay={i * 0.1}>
-              <article className="rounded-3xl bg-cream p-8 text-center sm:p-10">
+              <article className="rounded-3xl border border-ink/10 bg-white p-8 text-center sm:p-10">
                 <ImageFrame
                   bg={product.accent === "pink" ? "bg-blush/50" : "bg-milk/50"}
                   className="mx-auto w-full max-w-xs"

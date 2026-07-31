@@ -4,7 +4,7 @@ import Reveal from "./Reveal";
 export default function Philosophy() {
   return (
     <section className="px-3 sm:px-5">
-      <div className="rounded-3xl bg-milk px-5 py-28 sm:px-8 sm:py-40">
+      <div className="rounded-3xl bg-periwinkle px-5 py-28 sm:px-8 sm:py-40">
         <div className="mx-auto max-w-3xl text-center">
         <Reveal>
           <blockquote className="font-display text-3xl font-light leading-[1.25] tracking-tight text-periwinkle-ink sm:text-5xl">
