@@ -7,8 +7,9 @@ type CoverRect = { sx: number; sy: number; sw: number; sh: number };
 /**
  * Cursor-reveal hero: the base layer is the full-colour photo; a canvas on
  * top paints a grayscale copy of it. Hovering erodes the grayscale layer in
- * a soft, trailing blob so the colour underneath shows through — holding
- * still over one spot for 3s fades the whole frame to colour.
+ * a soft trailing blob so the colour underneath shows through — the
+ * revealed area stays in colour permanently, and holding still over one
+ * spot for 3s fades the whole frame to colour.
  */
 export default function HeroReveal({
   src,
@@ -109,12 +110,6 @@ export default function HeroReveal({
       const targetFull = pointer.active && hoverStart !== null && now - hoverStart > 3000 ? 1 : 0;
       const fullEase = targetFull ? 0.045 : 0.02;
       fullReveal += (targetFull - fullReveal) * fullEase;
-
-      maskCtx.save();
-      maskCtx.globalCompositeOperation = "destination-out";
-      maskCtx.fillStyle = "rgba(0,0,0,0.055)";
-      maskCtx.fillRect(0, 0, maskCanvas.width, maskCanvas.height);
-      maskCtx.restore();
 
       if (pointer.fade > 0.001) {
         maskCtx.save();
