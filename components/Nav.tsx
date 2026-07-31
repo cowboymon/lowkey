@@ -1,0 +1,26 @@
+import Image from "next/image";
+
+export default function Nav() {
+  return (
+    <header className="fixed inset-x-0 top-0 z-50 bg-cream/80 backdrop-blur-md">
+      <nav className="mx-auto flex max-w-6xl items-center justify-between px-5 py-4 sm:px-8">
+        <a href="#top" aria-label="Low Key — back to top">
+          <Image
+            src="/brand/logo-periwinkle.png"
+            alt="Low Key"
+            width={640}
+            height={133}
+            className="h-6 w-auto sm:h-7"
+            priority
+          />
+        </a>
+        <a
+          href="#waitlist"
+          className="rounded-full bg-ink px-5 py-2.5 font-display text-sm font-semibold text-butter transition-colors hover:bg-periwinkle-deep sm:text-base"
+        >
+          Join the Waitlist
+        </a>
+      </nav>
+    </header>
+  );
+}

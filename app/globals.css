@@ -1,0 +1,52 @@
+@import "tailwindcss";
+
+@theme {
+  /* Brand palette — sampled directly from Low-Key-Assets logo files */
+  --color-periwinkle: #9eb8d8; /* Dusty Periwinkle */
+  --color-periwinkle-deep: #5f7ba3; /* darker periwinkle for accessible text/hover */
+  --color-periwinkle-ink: #354763; /* near-ink periwinkle for text on light blue */
+  --color-butter: #fff1cd; /* Butter Yellow */
+  --color-butter-warm: #f4e8be; /* warm butter from moodboard background */
+  --color-cream: #fbf7ec; /* warm off-white page background */
+  --color-ink: #211f1c; /* near-black */
+
+  --font-display: var(--font-gabarito), ui-rounded, system-ui, sans-serif;
+  --font-body: var(--font-figtree), system-ui, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-cream);
+  color: var(--color-ink);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Scroll-triggered reveal (paired with components/Reveal.tsx) */
+.reveal {
+  opacity: 0;
+  transform: translateY(1.5rem);
+  transition:
+    opacity 0.9s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+  transition-delay: var(--reveal-delay, 0s);
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
