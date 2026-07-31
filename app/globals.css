@@ -24,6 +24,10 @@
   --color-blush: #f6ddc9; /* soft blush tint for backgrounds */
   --color-blush-deep: #eec3a4; /* fuller blush — accent panels */
 
+  /* temporary pop accent (retro-red, per moodboard Vogue rings) — slated
+     to be swapped for a final accent colour later */
+  --color-poppy: #d6402d;
+
   /* neutrals */
   --color-cream: #fbfbf8; /* clean near-white page background */
   --color-ink: #1d1c1a; /* near-black text */
