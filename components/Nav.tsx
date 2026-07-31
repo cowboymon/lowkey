@@ -9,12 +9,12 @@ import Image from "next/image";
 export default function Nav() {
   return (
     <header className="sticky top-0 z-50 bg-cream/95 px-3 pt-3 backdrop-blur-sm sm:px-5">
-      <p className="rounded-t-2xl bg-butter py-2 text-center text-xs font-medium uppercase tracking-[0.2em] text-ink">
+      <p className="rounded-2xl bg-butter py-2.5 text-center text-xs font-medium uppercase tracking-[0.2em] text-ink">
         Launching soon — the waitlist gets everything first
       </p>
       <nav
         aria-label="Main"
-        className="grid grid-cols-[1fr_auto_1fr] items-center rounded-b-2xl bg-periwinkle-ink px-5 py-4 sm:px-8"
+        className="mt-3 grid grid-cols-[1fr_auto_1fr] items-center rounded-2xl bg-periwinkle-ink px-5 py-4 sm:px-8"
       >
         <div className="flex items-center gap-5 text-xs font-medium uppercase tracking-[0.15em] text-cream/90 sm:gap-8 sm:text-sm">
           <a href="#product" className="transition-colors hover:text-butter">

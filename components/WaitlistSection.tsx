@@ -1,57 +1,32 @@
 import Reveal from "./Reveal";
 import WaitlistForm from "./WaitlistForm";
 
-const PERKS = [
-  {
-    title: "Early access",
-    copy: "Shop before the rest of the internet finds out.",
-  },
-  {
-    title: "Exclusive launch pricing",
-    copy: "Waitlist members pay less at launch. That's the whole perk. It's a good one.",
-  },
-  {
-    title: "Insider updates",
-    copy: "The behind-the-scenes stuff — formulas, launch dates, honest chaos.",
-  },
-  {
-    title: "First access to new scents",
-    copy: "Vanilla Glaze is just the beginning. You'll smell what's next, first.",
-  },
-];
-
+/**
+ * The conversion moment. One job: get noticed and get the email —
+ * centred, minimal copy, form front and centre (no perk-list clutter).
+ */
 export default function WaitlistSection({ source }: { source: string | null }) {
   return (
-    <section id="waitlist" className="scroll-mt-28 px-3 sm:px-5">
-      <div className="rounded-3xl bg-butter px-5 py-24 sm:px-8 sm:py-32">
-        <div className="mx-auto grid max-w-6xl gap-14 lg:grid-cols-2 lg:gap-24">
-        <div>
-          <Reveal>
-            <p className="text-sm font-medium uppercase tracking-[0.3em] text-periwinkle-deep">
-              The Waitlist
-            </p>
-            <h2 className="mt-4 font-display text-4xl font-light leading-[1.08] tracking-tight sm:text-6xl">
-              Your whole body deserves better. Get it first.
-            </h2>
-          </Reveal>
-          <div className="mt-12 space-y-8">
-            {PERKS.map((perk, i) => (
-              <Reveal key={perk.title} delay={i * 0.08}>
-                <div className="border-l-2 border-periwinkle pl-6">
-                  <h3 className="font-display text-xl text-ink">{perk.title}</h3>
-                  <p className="mt-1 text-stone">{perk.copy}</p>
-                </div>
-              </Reveal>
-            ))}
-          </div>
-        </div>
-        <Reveal delay={0.15} className="lg:pt-12">
-          {/* the form card is a deliberate saturated moment */}
-          <div className="rounded-3xl bg-white p-6 shadow-[0_40px_80px_-40px_rgba(29,28,26,0.25)] sm:p-10">
+    <section id="waitlist" className="scroll-mt-32 px-3 sm:px-5">
+      <div className="rounded-3xl bg-butter px-5 py-24 text-center sm:px-8 sm:py-36">
+        <Reveal>
+          <p className="text-sm font-medium uppercase tracking-[0.3em] text-periwinkle-deep">
+            The Waitlist
+          </p>
+          <h2 className="mx-auto mt-4 max-w-3xl font-display text-4xl font-light leading-[1.05] tracking-tight sm:text-7xl">
+            Your whole body deserves better. Get it first.
+          </h2>
+        </Reveal>
+        <Reveal delay={0.1}>
+          <p className="mx-auto mt-6 max-w-md text-lg text-ink/70">
+            Early access, launch pricing, first everything.
+          </p>
+        </Reveal>
+        <Reveal delay={0.2}>
+          <div className="mx-auto mt-12 max-w-xl rounded-3xl bg-white p-6 text-left shadow-[0_40px_80px_-40px_rgba(29,28,26,0.25)] sm:p-10">
             <WaitlistForm source={source} />
           </div>
         </Reveal>
-        </div>
       </div>
     </section>
   );
