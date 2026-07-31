@@ -3,10 +3,9 @@ import WaitlistForm from "./WaitlistForm";
 
 /**
  * Kindred-style footer: full-bleed golden-hour ocean photograph with a
- * near-full-width frosted panel — consistent column baseline, serif
- * column headers, newsletter column widest.
- * PLACEHOLDER imagery + menu links: pre-launch mock; swap image for
- * campaign photography and links for real pages when they exist.
+ * floating frosted card — generous internal spacing, newsletter column
+ * widest. PLACEHOLDER imagery + menu links: pre-launch mock; swap image
+ * for campaign photography and links for real pages when they exist.
  */
 const COLUMNS = [
   {
@@ -31,7 +30,7 @@ const COLUMNS = [
 export default function Footer({ source }: { source: string | null }) {
   return (
     <footer className="px-3 pb-3 pt-6 sm:px-5">
-      <div className="relative overflow-hidden rounded-3xl">
+      <div className="relative overflow-hidden rounded-3xl px-4 py-16 sm:px-10 sm:py-24">
         <Image
           src="/footer-gold.jpg"
           alt=""
@@ -41,24 +40,25 @@ export default function Footer({ source }: { source: string | null }) {
           className="-z-10 object-cover"
         />
 
-        <div className="mx-2 mb-2 mt-44 rounded-2xl bg-cream/85 px-6 py-12 backdrop-blur-md sm:mx-3 sm:mb-3 sm:mt-64 sm:px-14 sm:py-16">
+        <div className="mx-auto max-w-6xl rounded-2xl bg-cream/85 px-7 py-12 backdrop-blur-md sm:px-12 sm:py-14">
           <div className="grid gap-x-8 gap-y-12 lg:grid-cols-12">
             <div className="lg:col-span-3">
               <Image
-                src="/brand/logo-stacked-periwinkle.png"
-                alt="Low Key — Bio-balanced. Body Ready."
-                width={500}
-                height={330}
-                className="w-36 sm:w-40"
+                src="/brand/logo-periwinkle.png"
+                alt="Low Key"
+                width={640}
+                height={127}
+                className="h-7 w-auto"
               />
+              <p className="mt-4 text-sm leading-7 text-stone">
+                Bio-balanced. Body Ready. ~
+              </p>
             </div>
 
             {COLUMNS.map((column) => (
               <nav key={column.header} aria-label={column.header} className="lg:col-span-2">
-                <p className="font-display text-2xl font-light text-ink">
-                  {column.header}
-                </p>
-                <ul className="mt-5 space-y-0">
+                <p className="font-display text-xl text-ink">{column.header}</p>
+                <ul className="mt-5">
                   {column.links.map((link) => (
                     <li key={link.label}>
                       <a
@@ -74,7 +74,7 @@ export default function Footer({ source }: { source: string | null }) {
             ))}
 
             <div className="lg:col-span-5">
-              <p className="font-display text-2xl font-light text-ink">Low Key Post</p>
+              <p className="font-display text-xl text-ink">Low Key Post</p>
               <p className="mt-5 text-sm leading-7 text-stone">
                 Launch news and first-access perks, straight to your inbox.
               </p>
@@ -93,6 +93,9 @@ export default function Footer({ source }: { source: string | null }) {
               </a>
               <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" className="transition-colors hover:text-periwinkle-deep">
                 TikTok
+              </a>
+              <a href="#waitlist" className="transition-colors hover:text-periwinkle-deep">
+                Join the Waitlist
               </a>
             </div>
           </div>
