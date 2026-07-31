@@ -1,42 +1,48 @@
+import Image from "next/image";
 import Reveal from "./Reveal";
 
 /**
  * "Why Low Key" — restrained, editorial benefit callouts (lihmon-style:
- * short bold claim lines, scannable in seconds). Backgrounds stay soft
- * brand tints; saturation is reserved for CTAs elsewhere.
- * PLACEHOLDER visuals: soft brand-tint panels stand in for ingredient/
- * texture photography.
+ * short bold claim lines with a sensory close-up image, no badges/icons).
+ * PLACEHOLDER imagery: licensed Pexels macros standing in for brand
+ * photography — one sensory image per claim, per the shot list.
  */
 const BENEFITS = [
   {
     label: "Full-body use",
     claim: "For pits, thighs, under boobs... wherever life gets a little sweaty.",
-    tint: "bg-periwinkle",
+    image: "/benefits/fullbody.jpg",
+    alt: "Bare shoulder and neck in soft natural light",
   },
   {
     label: "pH balanced",
     claim: "Kind to the skin that's anything but ordinary.",
-    tint: "bg-butter",
+    image: "/benefits/ph.jpg",
+    alt: "Soft cream swirl close-up",
   },
   {
     label: "Microbiome supportive",
     claim: "Works with your skin. Not against it.",
-    tint: "bg-periwinkle",
+    image: "/benefits/microbiome.jpg",
+    alt: "Silky white texture close-up",
   },
   {
     label: "Dermatologist tested",
     claim: "Signed off by people in lab coats. Approved by actual skin.",
-    tint: "bg-butter",
+    image: "/benefits/derm.jpg",
+    alt: "Glass pipette on a clean white surface",
   },
   {
     label: "Aluminium free",
     claim: "No aluminium. No parabens. No second-guessing.",
-    tint: "bg-periwinkle",
+    image: "/benefits/aluminium.jpg",
+    alt: "Clear water splash crown on a light background",
   },
   {
     label: "24-hour odour control",
     claim: "On the clock all 24 hours, so you never have to think about it.",
-    tint: "bg-butter",
+    image: "/benefits/odour.jpg",
+    alt: "Warm sunlight through a sheer curtain",
   },
 ];
 
@@ -57,9 +63,15 @@ export default function Benefits() {
           {BENEFITS.map((benefit, i) => (
             <Reveal key={benefit.label} delay={(i % 3) * 0.08}>
               <div>
-                {/* PLACEHOLDER: brand-tint panel → swap for close-up
-                    ingredient/texture photograph */}
-                <div aria-hidden className={`aspect-[4/3] rounded-2xl ${benefit.tint}`} />
+                <div className="relative aspect-[4/3] overflow-hidden rounded-2xl">
+                  <Image
+                    src={benefit.image}
+                    alt={benefit.alt}
+                    fill
+                    sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
+                    className="object-cover"
+                  />
+                </div>
                 <p className="mt-6 text-xs font-medium uppercase tracking-[0.25em] text-periwinkle-deep">
                   {benefit.label}
                 </p>
@@ -70,6 +82,12 @@ export default function Benefits() {
             </Reveal>
           ))}
         </div>
+
+        <Reveal delay={0.2}>
+          <p className="mt-10 text-xs uppercase tracking-[0.2em] text-stone/60">
+            Placeholder imagery — swap for brand photography
+          </p>
+        </Reveal>
       </div>
     </section>
   );
