@@ -14,7 +14,7 @@ export default function Nav() {
       </p>
       <nav
         aria-label="Main"
-        className="mt-3 grid grid-cols-[1fr_auto_1fr] items-center rounded-2xl bg-periwinkle-ink px-5 py-4 sm:px-8"
+        className="mt-3 grid grid-cols-[1fr_auto_1fr] items-center rounded-2xl bg-ink px-5 py-4 sm:px-8"
       >
         <div className="flex items-center gap-5 text-xs font-medium uppercase tracking-[0.15em] text-cream/90 sm:gap-8 sm:text-sm">
           <a href="#product" className="transition-colors hover:text-butter">
