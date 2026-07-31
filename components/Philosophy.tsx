@@ -3,11 +3,7 @@ import Reveal from "./Reveal";
 
 export default function Philosophy() {
   return (
-    <section className="relative overflow-hidden px-5 py-32 sm:px-8 sm:py-48">
-      <div
-        aria-hidden
-        className="absolute inset-0 -z-10 bg-gradient-to-b from-cream via-milk to-milk-soft"
-      />
+    <section className="bg-milk px-5 py-32 sm:px-8 sm:py-44">
       <div className="mx-auto max-w-3xl text-center">
         <Reveal>
           <blockquote className="font-display text-3xl font-light leading-[1.25] tracking-tight text-periwinkle-ink sm:text-5xl">

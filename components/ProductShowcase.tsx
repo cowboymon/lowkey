@@ -6,11 +6,10 @@ export default function ProductShowcase() {
   const products = getProducts();
 
   return (
-    <section id="product" className="relative overflow-hidden px-5 py-28 sm:px-8 sm:py-36">
-      <div aria-hidden className="absolute inset-0 -z-10 bg-gradient-to-b from-cream via-milk-soft to-cream" />
+    <section id="product" className="bg-butter-soft px-5 py-28 sm:px-8 sm:py-36">
       <div className="mx-auto max-w-6xl">
         <Reveal>
-          <p className="text-sm font-medium uppercase tracking-[0.3em] text-cocoa">
+          <p className="text-sm font-medium uppercase tracking-[0.3em] text-periwinkle-deep">
             The Product
           </p>
           <h2 className="mt-4 max-w-2xl font-display text-4xl font-light leading-[1.08] tracking-tight sm:text-6xl">
@@ -22,15 +21,18 @@ export default function ProductShowcase() {
           </p>
         </Reveal>
 
-        <div className="mt-16 grid gap-14 sm:grid-cols-2 sm:gap-10">
+        <div className="mt-16 grid gap-10 sm:grid-cols-2">
           {products.map((product, i) => (
             <Reveal key={product.id} delay={i * 0.1}>
-              <article className="text-center">
-                <ImageFrame className="mx-auto w-full max-w-xs" />
+              <article className="rounded-3xl bg-cream p-8 text-center sm:p-10">
+                <ImageFrame
+                  bg={product.accent === "pink" ? "bg-blush/50" : "bg-milk/50"}
+                  className="mx-auto w-full max-w-xs"
+                />
                 <h3 className="mt-7 font-display text-3xl text-espresso">
                   {product.variant}
                 </h3>
-                <p className="mt-2 text-xs font-medium uppercase tracking-[0.25em] text-cocoa/80">
+                <p className="mt-2 text-xs font-medium uppercase tracking-[0.25em] text-periwinkle-deep">
                   {product.name} · {product.size}
                 </p>
                 <p className="mx-auto mt-4 max-w-xs text-cocoa">

@@ -2,23 +2,31 @@
 
 @theme {
   /*
-   * Brand palette — logo colours sampled from Low-Key-Assets, extended with
-   * the warm, edible, tone-on-tone range from the packaging refinement brief:
-   * butter yellow (hero), dusty/milky blue, soft blush / skin tone.
-   * Nothing bright, nothing high contrast.
+   * Brand palette — three colour families only (butter / periwinkle / blush),
+   * tied back to the logo assets + moodboard. Section backgrounds use the
+   * soft tints (tone-on-tone, "butter melting into skin"); the saturated
+   * steps are reserved for deliberate moments: buttons, CTAs, the form card.
+   * No invented in-between tones.
    */
-  --color-periwinkle: #9eb8d8; /* Dusty Periwinkle (logo — locked) */
-  --color-periwinkle-deep: #6c86ab; /* deeper periwinkle for accessible accents */
-  --color-periwinkle-ink: #3d4e68; /* near-ink periwinkle for text on blue */
-  --color-milk: #dde6f0; /* milky blue */
-  --color-milk-soft: #ecf1f7; /* faint milky blue wash */
-  --color-butter: #fff1cd; /* Butter Yellow (hero) */
-  --color-butter-warm: #f4e8be; /* warm butter from moodboard */
-  --color-blush: #f3dcc8; /* soft blush / skin tone */
-  --color-blush-deep: #e8c6ab; /* deeper skin tone */
-  --color-caramel: #c99a72; /* warm gourmand caramel */
-  --color-cream: #faf6ec; /* warm off-white page background */
-  --color-espresso: #453931; /* warm dark brown — replaces black */
+
+  /* periwinkle family (logo — locked) */
+  --color-periwinkle: #9eb8d8; /* Dusty Periwinkle */
+  --color-periwinkle-deep: #52719f; /* saturated moment — buttons/CTAs */
+  --color-periwinkle-ink: #34486a; /* dark blue text on blue tints */
+  --color-milk: #dbe5f1; /* soft periwinkle tint for backgrounds */
+
+  /* butter family (hero colour) */
+  --color-butter: #fff1cd; /* Butter Yellow (from logo assets) */
+  --color-butter-deep: #ffe098; /* saturated moment — form card, accents */
+  --color-butter-soft: #fbf3dd; /* soft butter wash */
+
+  /* blush family (skin tone, from packaging brief) */
+  --color-blush: #f6ddc9; /* soft blush tint for backgrounds */
+  --color-blush-deep: #eec3a4; /* saturated blush moment */
+
+  /* neutrals */
+  --color-cream: #fdfaf2; /* crisp warm-white page background */
+  --color-espresso: #453931; /* warm dark brown text (no black) */
   --color-cocoa: #6f5f52; /* soft warm secondary text */
 
   --font-display: var(--font-fraunces), Georgia, serif;

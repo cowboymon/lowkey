@@ -6,15 +6,17 @@
 export default function ImageFrame({
   label = "Product imagery coming soon",
   ratio = "aspect-[4/5]",
+  bg = "bg-white/40",
   className = "",
 }: {
   label?: string;
   ratio?: string;
+  bg?: string;
   className?: string;
 }) {
   return (
     <div
-      className={`relative flex ${ratio} items-center justify-center rounded-3xl border border-espresso/10 bg-white/40 ${className}`}
+      className={`relative flex ${ratio} items-center justify-center rounded-3xl border border-espresso/10 ${bg} ${className}`}
     >
       <span className="max-w-[70%] text-center text-xs uppercase tracking-[0.25em] leading-relaxed text-cocoa/60">
         {label}

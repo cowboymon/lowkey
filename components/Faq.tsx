@@ -29,7 +29,7 @@ export default function Faq() {
     <section id="faq" className="px-5 py-28 sm:px-8 sm:py-36">
       <div className="mx-auto max-w-3xl">
         <Reveal>
-          <p className="text-sm font-medium uppercase tracking-[0.3em] text-cocoa">
+          <p className="text-sm font-medium uppercase tracking-[0.3em] text-periwinkle-deep">
             FAQ
           </p>
           <h2 className="mt-4 font-display text-4xl font-light leading-[1.08] tracking-tight sm:text-6xl">
@@ -54,7 +54,7 @@ export default function Faq() {
                   </span>
                   <span
                     aria-hidden
-                    className={`shrink-0 font-display text-2xl font-light text-cocoa transition-transform duration-300 ${
+                    className={`shrink-0 font-display text-2xl font-light text-periwinkle-deep transition-transform duration-300 ${
                       isOpen ? "rotate-45" : ""
                     }`}
                   >

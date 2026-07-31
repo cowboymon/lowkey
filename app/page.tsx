@@ -2,6 +2,7 @@ import Nav from "@/components/Nav";
 import Hero from "@/components/Hero";
 import Problem from "@/components/Problem";
 import Benefits from "@/components/Benefits";
+import Ingredients from "@/components/Ingredients";
 import ProductShowcase from "@/components/ProductShowcase";
 import Philosophy from "@/components/Philosophy";
 import WaitlistSection from "@/components/WaitlistSection";
@@ -24,6 +25,7 @@ export default async function Home({
         <Hero />
         <Problem />
         <Benefits />
+        <Ingredients />
         <ProductShowcase />
         <Philosophy />
         <WaitlistSection source={source} />

@@ -28,12 +28,12 @@ export default function WaitlistSection({ source }: { source: string | null }) {
     >
       <div
         aria-hidden
-        className="absolute inset-0 -z-10 bg-gradient-to-b from-cream via-butter to-butter-warm"
+        className="absolute inset-0 -z-10 bg-gradient-to-b from-cream to-butter-soft"
       />
       <div className="mx-auto grid max-w-6xl gap-14 lg:grid-cols-2 lg:gap-24">
         <div>
           <Reveal>
-            <p className="text-sm font-medium uppercase tracking-[0.3em] text-cocoa">
+            <p className="text-sm font-medium uppercase tracking-[0.3em] text-periwinkle-deep">
               Founding Member Waitlist
             </p>
             <h2 className="mt-4 font-display text-4xl font-light leading-[1.08] tracking-tight sm:text-6xl">
@@ -44,7 +44,7 @@ export default function WaitlistSection({ source }: { source: string | null }) {
           <div className="mt-12 space-y-8">
             {PERKS.map((perk, i) => (
               <Reveal key={perk.title} delay={i * 0.08}>
-                <div className="border-l border-espresso/15 pl-6">
+                <div className="border-l-2 border-periwinkle pl-6">
                   <h3 className="font-display text-xl text-espresso">{perk.title}</h3>
                   <p className="mt-1 text-cocoa">{perk.copy}</p>
                 </div>
@@ -53,7 +53,8 @@ export default function WaitlistSection({ source }: { source: string | null }) {
           </div>
         </div>
         <Reveal delay={0.15} className="lg:pt-12">
-          <div className="rounded-3xl bg-cream/90 p-6 shadow-[0_40px_80px_-40px_rgba(69,57,49,0.35)] sm:p-10">
+          {/* the form card is a deliberate saturated moment */}
+          <div className="rounded-3xl bg-butter-deep p-6 shadow-[0_40px_80px_-40px_rgba(69,57,49,0.35)] sm:p-10">
             <WaitlistForm source={source} />
           </div>
         </Reveal>

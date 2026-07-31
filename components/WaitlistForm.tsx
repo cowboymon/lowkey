@@ -46,7 +46,7 @@ export default function WaitlistForm({ source }: { source: string | null }) {
       </div>
 
       <div>
-        <label htmlFor="name" className="mb-1.5 block text-sm font-medium text-cocoa">
+        <label htmlFor="name" className="mb-1.5 block text-sm font-medium text-espresso/80">
           First name <span className="font-normal text-cocoa/60">(optional)</span>
         </label>
         <input
@@ -60,7 +60,7 @@ export default function WaitlistForm({ source }: { source: string | null }) {
       </div>
 
       <div>
-        <label htmlFor="email" className="mb-1.5 block text-sm font-medium text-cocoa">
+        <label htmlFor="email" className="mb-1.5 block text-sm font-medium text-espresso/80">
           Email
         </label>
         <input
@@ -83,12 +83,12 @@ export default function WaitlistForm({ source }: { source: string | null }) {
       <button
         type="submit"
         disabled={pending}
-        className="w-full rounded-full bg-espresso px-8 py-4 text-lg font-medium tracking-wide text-butter transition-colors hover:bg-cocoa disabled:cursor-not-allowed disabled:opacity-60"
+        className="w-full rounded-full bg-periwinkle-deep px-8 py-4 text-lg font-medium tracking-wide text-cream transition-colors hover:bg-periwinkle-ink disabled:cursor-not-allowed disabled:opacity-60"
       >
         {pending ? "Adding you..." : "Count me in"}
       </button>
 
-      <p className="text-center text-xs text-cocoa/70">
+      <p className="text-center text-xs text-espresso/60">
         No spam, no oversharing. Just launch news and founding-member perks.
       </p>
     </form>

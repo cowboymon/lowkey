@@ -16,7 +16,7 @@ export default function Nav() {
         </a>
         <a
           href="#waitlist"
-          className="rounded-full bg-espresso px-5 py-2.5 text-sm font-medium tracking-wide text-butter transition-colors hover:bg-cocoa sm:text-base"
+          className="rounded-full bg-periwinkle-deep px-5 py-2.5 text-sm font-medium tracking-wide text-cream transition-colors hover:bg-periwinkle-ink sm:text-base"
         >
           Join the Waitlist
         </a>
