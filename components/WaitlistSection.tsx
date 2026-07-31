@@ -38,7 +38,7 @@ export default function WaitlistSection({ source }: { source: string | null }) {
             </p>
             <h2 className="mt-4 font-display text-4xl font-light leading-[1.08] tracking-tight sm:text-6xl">
               Your whole body deserves better.{" "}
-              <em className="font-normal text-periwinkle-deep">Get it first.</em>
+              <em className="font-normal">Get it first.</em>
             </h2>
           </Reveal>
           <div className="mt-12 space-y-8">

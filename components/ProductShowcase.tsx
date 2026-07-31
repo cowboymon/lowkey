@@ -13,7 +13,7 @@ export default function ProductShowcase() {
             The Product
           </p>
           <h2 className="mt-4 max-w-2xl font-display text-4xl font-light leading-[1.08] tracking-tight sm:text-6xl">
-            We made deodorant for <em className="font-normal text-periwinkle-deep">the rest of you.</em>
+            We made deodorant for <em className="font-normal">the rest of you.</em>
           </h2>
           <p className="mt-5 max-w-xl text-lg text-stone">
             One stick, two moods. Coming soon&nbsp;— founding members get to it

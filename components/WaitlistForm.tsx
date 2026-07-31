@@ -83,7 +83,7 @@ export default function WaitlistForm({ source }: { source: string | null }) {
       <button
         type="submit"
         disabled={pending}
-        className="w-full rounded-full bg-periwinkle-deep px-8 py-4 text-lg font-semibold tracking-wide text-cream transition-colors hover:bg-periwinkle-ink disabled:cursor-not-allowed disabled:opacity-60"
+        className="w-full rounded-full bg-periwinkle-deep px-6 py-3 text-base font-medium tracking-wide text-cream transition-colors hover:bg-periwinkle-ink disabled:cursor-not-allowed disabled:opacity-60"
       >
         {pending ? "Adding you..." : "Count me in"}
       </button>

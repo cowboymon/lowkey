@@ -33,7 +33,7 @@ export default function Faq() {
             FAQ
           </p>
           <h2 className="mt-4 font-display text-4xl font-light leading-[1.08] tracking-tight sm:text-6xl">
-            Asking <em className="font-normal text-periwinkle-deep">for a friend.</em>
+            Asking <em className="font-normal">for a friend.</em>
           </h2>
         </Reveal>
 

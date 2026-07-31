@@ -19,12 +19,12 @@ const INGREDIENTS = [
   {
     name: "Soothing botanicals",
     copy: "Calms and conditions skin that moves, rubs and sweats — gentle enough for the most sensitive places.",
-    tint: "bg-blush-deep",
+    tint: "bg-blush",
   },
   {
     name: "pH-balancing acids",
     copy: "Keeps skin at its happy, slightly-acidic best — where odour struggles and your barrier thrives.",
-    tint: "bg-periwinkle",
+    tint: "bg-milk",
   },
 ];
 
@@ -37,7 +37,7 @@ export default function Ingredients() {
             How it works
           </p>
           <h2 className="mt-4 max-w-2xl font-display text-4xl font-light leading-[1.08] tracking-tight sm:text-6xl">
-            Science, but make it <em className="font-normal text-periwinkle-deep">gentle.</em>
+            Science, but make it <em className="font-normal">gentle.</em>
           </h2>
         </Reveal>
 

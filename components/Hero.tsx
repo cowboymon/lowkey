@@ -19,7 +19,7 @@ export default function Hero() {
         fill
         priority
         sizes="100vw"
-        className="-z-10 object-cover grayscale"
+        className="-z-10 object-cover object-[50%_30%] grayscale"
       />
       {/* legibility scrim */}
       <div
@@ -48,7 +48,7 @@ export default function Hero() {
           <div className="mt-9 flex flex-wrap items-center gap-5">
             <a
               href="#waitlist"
-              className="rounded-full bg-periwinkle px-9 py-4 text-lg font-semibold tracking-wide text-periwinkle-ink transition-colors hover:bg-butter hover:text-ink"
+              className="rounded-full bg-periwinkle-deep px-7 py-3 text-base font-medium tracking-wide text-cream transition-colors hover:bg-periwinkle-ink"
             >
               Join the Waitlist
             </a>
