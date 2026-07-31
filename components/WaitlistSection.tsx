@@ -17,11 +17,6 @@ export default function WaitlistSection({ source }: { source: string | null }) {
             Your whole body deserves better. Get it first.
           </h2>
         </Reveal>
-        <Reveal delay={0.1}>
-          <p className="mx-auto mt-6 max-w-md text-lg text-ink/70">
-            Early access, launch pricing, first everything.
-          </p>
-        </Reveal>
         <Reveal delay={0.2}>
           <div className="mx-auto mt-12 max-w-xl text-left">
             <WaitlistForm source={source} />

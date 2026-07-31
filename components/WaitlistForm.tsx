@@ -46,7 +46,8 @@ export default function WaitlistForm({ source }: { source: string | null }) {
         <input id="company" type="text" name="company" tabIndex={-1} autoComplete="off" />
       </div>
 
-      <div className="flex flex-col gap-3 sm:flex-row">
+      {/* single underlined line: input left, submit right */}
+      <div className="flex items-center gap-4 border-b border-ink pb-3">
         <label htmlFor="email" className="sr-only">
           Email
         </label>
@@ -56,25 +57,23 @@ export default function WaitlistForm({ source }: { source: string | null }) {
           name="email"
           required
           autoComplete="email"
-          placeholder="you@email.com"
+          placeholder="EMAIL"
           aria-invalid={Boolean(clientError) || state.status === "error"}
           aria-describedby="email-feedback"
-          className="w-full flex-1 rounded-full bg-white px-6 py-4 text-ink outline-none ring-periwinkle-deep transition-shadow placeholder:text-stone/50 focus:ring-2"
+          className="w-full flex-1 bg-transparent text-sm uppercase tracking-[0.2em] text-ink outline-none placeholder:text-ink/60"
         />
         <button
           type="submit"
           disabled={pending}
-          className="shrink-0 rounded-full bg-ink px-8 py-4 font-medium tracking-wide text-cream transition-colors hover:bg-periwinkle-deep disabled:cursor-not-allowed disabled:opacity-60"
+          className="shrink-0 text-sm font-medium uppercase tracking-[0.2em] text-ink transition-colors hover:text-periwinkle-deep disabled:cursor-not-allowed disabled:opacity-60"
         >
-          {pending ? "Adding you..." : "Notify me"}
+          {pending ? "Adding..." : "Notify me"}
         </button>
       </div>
 
-      <p id="email-feedback" role="alert" className="mt-2 min-h-5 text-sm font-medium text-poppy">
+      <p id="email-feedback" role="alert" className="mt-3 min-h-5 text-sm font-medium text-poppy">
         {clientError ?? (state.status === "error" ? state.message : "")}
       </p>
-
-      <p className="text-sm text-ink/60">We&rsquo;ll email you once. Nothing else.</p>
     </form>
   );
 }
