@@ -22,9 +22,6 @@ export default function ProductShowcase() {
           {products.map((product, i) => (
             <Reveal key={product.id} delay={i * 0.1}>
               <article className="relative rounded-3xl border border-ink/10 bg-white p-8 text-center sm:p-10">
-                <span className="absolute right-5 top-5 rounded-full bg-poppy px-3.5 py-1.5 text-[0.65rem] font-semibold uppercase tracking-[0.18em] text-white">
-                  Coming soon
-                </span>
                 <ImageFrame
                   bg={product.accent === "pink" ? "bg-blush/50" : "bg-milk/50"}
                   className="mx-auto w-full max-w-xs"

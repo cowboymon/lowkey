@@ -14,13 +14,13 @@ export default function Nav() {
       </p>
       <nav
         aria-label="Main"
-        className="mt-3 grid grid-cols-[1fr_auto_1fr] items-center rounded-2xl bg-ink px-5 py-4 sm:px-8"
+        className="mt-3 flex items-center justify-between rounded-2xl bg-ink px-5 py-4 sm:grid sm:grid-cols-[1fr_auto_1fr] sm:px-8"
       >
-        <div className="flex items-center gap-5 text-xs font-medium uppercase tracking-[0.15em] text-cream/90 sm:gap-8 sm:text-sm">
+        <div className="hidden items-center gap-5 text-xs font-medium uppercase tracking-[0.15em] text-cream/90 sm:order-1 sm:flex sm:gap-8 sm:text-sm">
           <a href="#product" className="transition-colors hover:text-butter">
             Shop
           </a>
-          <a href="#why" className="hidden transition-colors hover:text-butter sm:inline">
+          <a href="#why" className="transition-colors hover:text-butter">
             About
           </a>
           <a href="#waitlist" className="transition-colors hover:text-butter">
@@ -28,7 +28,7 @@ export default function Nav() {
           </a>
         </div>
 
-        <a href="#top" aria-label="Low Key — back to top" className="px-3">
+        <a href="#top" aria-label="Low Key — back to top" className="px-3 sm:order-2">
           <Image
             src="/brand/logo-white.png"
             alt="Low Key"
@@ -39,7 +39,10 @@ export default function Nav() {
           />
         </a>
 
-        <div className="flex items-center justify-end gap-5 text-xs font-medium uppercase tracking-[0.15em] text-cream/90 sm:gap-8 sm:text-sm">
+        <div className="flex items-center gap-5 text-xs font-medium uppercase tracking-[0.15em] text-cream/90 sm:order-3 sm:justify-end sm:gap-8 sm:text-sm">
+          <a href="#product" className="transition-colors hover:text-butter sm:hidden">
+            Shop
+          </a>
           <a href="#" aria-disabled className="hidden transition-colors hover:text-butter sm:inline">
             Search
           </a>

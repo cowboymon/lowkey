@@ -79,12 +79,6 @@ export default function Benefits() {
             </Reveal>
           ))}
         </div>
-
-        <Reveal delay={0.2}>
-          <p className="mt-10 text-xs uppercase tracking-[0.2em] text-stone/60">
-            Placeholder imagery — swap for brand photography
-          </p>
-        </Reveal>
       </div>
     </section>
   );
