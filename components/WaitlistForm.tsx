@@ -46,20 +46,6 @@ export default function WaitlistForm({ source }: { source: string | null }) {
       </div>
 
       <div>
-        <label htmlFor="name" className="mb-1.5 block text-sm font-medium text-ink/80">
-          First name <span className="font-normal text-stone/60">(optional)</span>
-        </label>
-        <input
-          id="name"
-          type="text"
-          name="name"
-          autoComplete="given-name"
-          placeholder="Your name"
-          className="w-full rounded-2xl border border-ink/15 bg-white px-5 py-4 text-ink outline-none transition-colors placeholder:text-stone/40 focus:border-periwinkle-deep"
-        />
-      </div>
-
-      <div>
         <label htmlFor="email" className="mb-1.5 block text-sm font-medium text-ink/80">
           Email
         </label>
