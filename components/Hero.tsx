@@ -32,7 +32,7 @@ export default function Hero() {
 
       {/* beat one — hero */}
       <div className="flex min-h-[88svh] flex-col justify-end">
-        <div className="mx-auto w-full max-w-6xl px-5 pb-16 pt-32 sm:px-8 sm:pb-24">
+        <div className="mx-auto w-full max-w-6xl px-5 pb-24 pt-32 sm:px-8 sm:pb-36">
           <Reveal>
             <p className="mb-5 text-sm font-medium uppercase tracking-[0.3em] text-white [text-shadow:0_1px_12px_rgba(29,28,26,0.5)]">
               Bio-balanced. Body Ready.
