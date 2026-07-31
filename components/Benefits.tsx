@@ -12,25 +12,25 @@ const BENEFITS = [
     label: "Full-body use",
     claim: "For pits, thighs, under boobs... wherever life gets a little sweaty.",
     image: "/benefits/fullbody.jpg",
-    alt: "Bare shoulder and neck in soft natural light",
+    alt: "Sweat droplets beading on warm skin, close up",
   },
   {
     label: "pH balanced",
     claim: "Kind to the skin that's anything but ordinary.",
     image: "/benefits/ph.jpg",
-    alt: "Soft cream swirl close-up",
+    alt: "Milk drop hovering over a creamy ripple",
   },
   {
     label: "Microbiome supportive",
     claim: "Works with your skin. Not against it.",
     image: "/benefits/microbiome.jpg",
-    alt: "Silky white texture close-up",
+    alt: "Glassy bubbles in soft blue and green tones",
   },
   {
     label: "Dermatologist tested",
     claim: "Signed off by people in lab coats. Approved by actual skin.",
     image: "/benefits/derm.jpg",
-    alt: "Glass pipette on a clean white surface",
+    alt: "Clear droplets suspended on a light surface",
   },
   {
     label: "Aluminium free",
@@ -42,7 +42,7 @@ const BENEFITS = [
     label: "24-hour odour control",
     claim: "On the clock all 24 hours, so you never have to think about it.",
     image: "/benefits/odour.jpg",
-    alt: "Warm sunlight through a sheer curtain",
+    alt: "Morning dew on grass backlit by golden sun",
   },
 ];
 
