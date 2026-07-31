@@ -23,15 +23,11 @@ export default function Hero() {
         sizes="100vw"
         className="-z-10 object-cover grayscale"
       />
-      {/* legibility scrims: soft overall veil + heavier feet under the copy */}
-      <div aria-hidden className="absolute inset-0 -z-10 bg-ink/25" />
+      {/* legibility scrim: one continuous gradient, darker under each copy
+          beat, no hard edges */}
       <div
         aria-hidden
-        className="absolute inset-x-0 top-1/4 -z-10 h-1/4 bg-gradient-to-t from-ink/45 to-transparent"
-      />
-      <div
-        aria-hidden
-        className="absolute inset-x-0 bottom-0 -z-10 h-1/3 bg-gradient-to-t from-ink/40 to-transparent"
+        className="absolute inset-0 -z-10 bg-[linear-gradient(to_bottom,rgba(29,28,26,0.18),rgba(29,28,26,0.5)_46%,rgba(29,28,26,0.28)_66%,rgba(29,28,26,0.5))]"
       />
 
       {/* beat one — hero */}
