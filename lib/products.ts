@@ -4,7 +4,8 @@
  * v1 serves static placeholder data. At launch this module is the single
  * swap point for Shopify: replace `getProducts()` with a Storefront API
  * query (keeping the same `Product` shape) and every component keeps
- * working — no rewrite needed.
+ * working — no rewrite needed. (Add an `image` field here when real
+ * product photography replaces the neutral placeholder frames.)
  */
 export type Product = {
   id: string;
@@ -12,10 +13,6 @@ export type Product = {
   variant: string;
   size: string;
   description: string;
-  /** PLACEHOLDER imagery: cropped packaging renders from the Stage 6 pack
-   *  design PDF. Swap for real product photography before launch. */
-  image: string;
-  imageAlt: string;
   accent: "pink" | "blue";
 };
 
@@ -28,8 +25,6 @@ export function getProducts(): Product[] {
       size: "75 mL",
       description:
         "Warm, soft, dessert-adjacent — without smelling like a bakery got involved.",
-      image: "/product/deo-vanilla-glaze.png",
-      imageAlt: "Low Key full-body deodorant stick — Vanilla Glaze",
       accent: "pink",
     },
     {
@@ -39,8 +34,6 @@ export function getProducts(): Product[] {
       size: "75 mL",
       description:
         "For skin that prefers the quiet. All of the odour control, none of the fragrance.",
-      image: "/product/deo-unscented.png",
-      imageAlt: "Low Key full-body deodorant stick — Unscented",
       accent: "blue",
     },
   ];

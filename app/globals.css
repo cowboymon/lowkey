@@ -1,16 +1,27 @@
 @import "tailwindcss";
 
 @theme {
-  /* Brand palette — sampled directly from Low-Key-Assets logo files */
-  --color-periwinkle: #9eb8d8; /* Dusty Periwinkle */
-  --color-periwinkle-deep: #5f7ba3; /* darker periwinkle for accessible text/hover */
-  --color-periwinkle-ink: #354763; /* near-ink periwinkle for text on light blue */
-  --color-butter: #fff1cd; /* Butter Yellow */
-  --color-butter-warm: #f4e8be; /* warm butter from moodboard background */
-  --color-cream: #fbf7ec; /* warm off-white page background */
-  --color-ink: #211f1c; /* near-black */
+  /*
+   * Brand palette — logo colours sampled from Low-Key-Assets, extended with
+   * the warm, edible, tone-on-tone range from the packaging refinement brief:
+   * butter yellow (hero), dusty/milky blue, soft blush / skin tone.
+   * Nothing bright, nothing high contrast.
+   */
+  --color-periwinkle: #9eb8d8; /* Dusty Periwinkle (logo — locked) */
+  --color-periwinkle-deep: #6c86ab; /* deeper periwinkle for accessible accents */
+  --color-periwinkle-ink: #3d4e68; /* near-ink periwinkle for text on blue */
+  --color-milk: #dde6f0; /* milky blue */
+  --color-milk-soft: #ecf1f7; /* faint milky blue wash */
+  --color-butter: #fff1cd; /* Butter Yellow (hero) */
+  --color-butter-warm: #f4e8be; /* warm butter from moodboard */
+  --color-blush: #f3dcc8; /* soft blush / skin tone */
+  --color-blush-deep: #e8c6ab; /* deeper skin tone */
+  --color-caramel: #c99a72; /* warm gourmand caramel */
+  --color-cream: #faf6ec; /* warm off-white page background */
+  --color-espresso: #453931; /* warm dark brown — replaces black */
+  --color-cocoa: #6f5f52; /* soft warm secondary text */
 
-  --font-display: var(--font-gabarito), ui-rounded, system-ui, sans-serif;
+  --font-display: var(--font-fraunces), Georgia, serif;
   --font-body: var(--font-figtree), system-ui, sans-serif;
 }
 
@@ -20,7 +31,7 @@ html {
 
 body {
   background-color: var(--color-cream);
-  color: var(--color-ink);
+  color: var(--color-espresso);
   font-family: var(--font-body);
   -webkit-font-smoothing: antialiased;
 }
@@ -30,8 +41,8 @@ body {
   opacity: 0;
   transform: translateY(1.5rem);
   transition:
-    opacity 0.9s cubic-bezier(0.22, 1, 0.36, 1),
-    transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+    opacity 1.1s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 1.1s cubic-bezier(0.22, 1, 0.36, 1);
   transition-delay: var(--reveal-delay, 0s);
 }
 

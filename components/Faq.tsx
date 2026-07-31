@@ -26,18 +26,18 @@ export default function Faq() {
   const [open, setOpen] = useState<number | null>(0);
 
   return (
-    <section id="faq" className="px-5 py-24 sm:px-8 sm:py-32">
+    <section id="faq" className="px-5 py-28 sm:px-8 sm:py-36">
       <div className="mx-auto max-w-3xl">
         <Reveal>
-          <p className="font-display text-sm font-semibold uppercase tracking-[0.2em] text-periwinkle-deep">
+          <p className="text-sm font-medium uppercase tracking-[0.3em] text-cocoa">
             FAQ
           </p>
-          <h2 className="mt-3 font-display text-4xl font-bold leading-[1.05] tracking-tight sm:text-5xl">
-            Asking for a friend.
+          <h2 className="mt-4 font-display text-4xl font-light leading-[1.08] tracking-tight sm:text-6xl">
+            Asking <em className="font-normal">for a friend.</em>
           </h2>
         </Reveal>
 
-        <div className="mt-12 divide-y divide-ink/10 border-y border-ink/10">
+        <div className="mt-14 divide-y divide-espresso/10 border-y border-espresso/10">
           {FAQS.map((faq, i) => {
             const isOpen = open === i;
             return (
@@ -49,12 +49,12 @@ export default function Faq() {
                   aria-controls={`faq-panel-${i}`}
                   className="flex w-full items-center justify-between gap-6 py-6 text-left"
                 >
-                  <span className="font-display text-lg font-bold text-ink sm:text-xl">
+                  <span className="font-display text-xl text-espresso sm:text-2xl">
                     {faq.q}
                   </span>
                   <span
                     aria-hidden
-                    className={`shrink-0 font-display text-2xl font-bold text-periwinkle-deep transition-transform duration-300 ${
+                    className={`shrink-0 font-display text-2xl font-light text-cocoa transition-transform duration-300 ${
                       isOpen ? "rotate-45" : ""
                     }`}
                   >
@@ -68,7 +68,7 @@ export default function Faq() {
                   }`}
                 >
                   <div className="overflow-hidden">
-                    <p className="pb-6 leading-relaxed text-ink/70">{faq.a}</p>
+                    <p className="pb-6 leading-relaxed text-cocoa">{faq.a}</p>
                   </div>
                 </div>
               </div>

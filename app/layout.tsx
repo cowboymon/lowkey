@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
-import { Figtree, Gabarito } from "next/font/google";
+import { Figtree, Fraunces } from "next/font/google";
 import "./globals.css";
 
-const gabarito = Gabarito({
+const fraunces = Fraunces({
   subsets: ["latin"],
-  variable: "--font-gabarito",
+  variable: "--font-fraunces",
   display: "swap",
+  axes: ["opsz", "SOFT"],
 });
 
 const figtree = Figtree({
@@ -42,7 +43,7 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className={`${gabarito.variable} ${figtree.variable}`}>
+    <html lang="en" className={`${fraunces.variable} ${figtree.variable}`}>
       <body>{children}</body>
     </html>
   );

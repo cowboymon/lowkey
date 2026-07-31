@@ -12,14 +12,11 @@ export default function WaitlistForm({ source }: { source: string | null }) {
 
   if (state.status === "success" || state.status === "already") {
     return (
-      <div
-        role="status"
-        className="rounded-3xl bg-ink p-8 text-center sm:p-10"
-      >
-        <p className="font-display text-3xl font-bold text-butter">
+      <div role="status" className="py-6 text-center">
+        <p className="font-display text-3xl text-espresso">
           {state.status === "success" ? "Bodies body. Yours is in." : "Already in."}
         </p>
-        <p className="mt-4 text-lg leading-relaxed text-cream/80">{state.message}</p>
+        <p className="mt-4 text-lg leading-relaxed text-cocoa">{state.message}</p>
       </div>
     );
   }
@@ -49,8 +46,8 @@ export default function WaitlistForm({ source }: { source: string | null }) {
       </div>
 
       <div>
-        <label htmlFor="name" className="mb-1.5 block font-display text-sm font-semibold text-ink/70">
-          First name <span className="font-normal text-ink/40">(optional)</span>
+        <label htmlFor="name" className="mb-1.5 block text-sm font-medium text-cocoa">
+          First name <span className="font-normal text-cocoa/60">(optional)</span>
         </label>
         <input
           id="name"
@@ -58,12 +55,12 @@ export default function WaitlistForm({ source }: { source: string | null }) {
           name="name"
           autoComplete="given-name"
           placeholder="Your name"
-          className="w-full rounded-2xl border border-ink/15 bg-white px-5 py-4 text-ink outline-none transition-colors placeholder:text-ink/35 focus:border-periwinkle-deep"
+          className="w-full rounded-2xl border border-espresso/15 bg-white px-5 py-4 text-espresso outline-none transition-colors placeholder:text-cocoa/40 focus:border-periwinkle-deep"
         />
       </div>
 
       <div>
-        <label htmlFor="email" className="mb-1.5 block font-display text-sm font-semibold text-ink/70">
+        <label htmlFor="email" className="mb-1.5 block text-sm font-medium text-cocoa">
           Email
         </label>
         <input
@@ -75,23 +72,23 @@ export default function WaitlistForm({ source }: { source: string | null }) {
           placeholder="you@example.com"
           aria-invalid={Boolean(clientError) || state.status === "error"}
           aria-describedby="email-feedback"
-          className="w-full rounded-2xl border border-ink/15 bg-white px-5 py-4 text-ink outline-none transition-colors placeholder:text-ink/35 focus:border-periwinkle-deep"
+          className="w-full rounded-2xl border border-espresso/15 bg-white px-5 py-4 text-espresso outline-none transition-colors placeholder:text-cocoa/40 focus:border-periwinkle-deep"
         />
       </div>
 
-      <p id="email-feedback" role="alert" className="min-h-5 text-sm font-medium text-red-700/80">
+      <p id="email-feedback" role="alert" className="min-h-5 text-sm font-medium text-red-800/80">
         {clientError ?? (state.status === "error" ? state.message : "")}
       </p>
 
       <button
         type="submit"
         disabled={pending}
-        className="w-full rounded-full bg-ink px-8 py-4 font-display text-lg font-semibold text-butter transition-all hover:bg-periwinkle-deep disabled:cursor-not-allowed disabled:opacity-60"
+        className="w-full rounded-full bg-espresso px-8 py-4 text-lg font-medium tracking-wide text-butter transition-colors hover:bg-cocoa disabled:cursor-not-allowed disabled:opacity-60"
       >
         {pending ? "Adding you..." : "Count me in"}
       </button>
 
-      <p className="text-center text-xs text-ink/45">
+      <p className="text-center text-xs text-cocoa/70">
         No spam, no oversharing. Just launch news and founding-member perks.
       </p>
     </form>

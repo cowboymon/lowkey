@@ -22,35 +22,38 @@ const PERKS = [
 
 export default function WaitlistSection({ source }: { source: string | null }) {
   return (
-    <section id="waitlist" className="scroll-mt-16 bg-butter px-5 py-24 sm:px-8 sm:py-32">
-      <div className="mx-auto grid max-w-6xl gap-12 lg:grid-cols-2 lg:gap-20">
+    <section
+      id="waitlist"
+      className="relative scroll-mt-16 overflow-hidden px-5 py-28 sm:px-8 sm:py-36"
+    >
+      <div
+        aria-hidden
+        className="absolute inset-0 -z-10 bg-gradient-to-b from-cream via-butter to-butter-warm"
+      />
+      <div className="mx-auto grid max-w-6xl gap-14 lg:grid-cols-2 lg:gap-24">
         <div>
           <Reveal>
-            <p className="font-display text-sm font-semibold uppercase tracking-[0.2em] text-periwinkle-deep">
+            <p className="text-sm font-medium uppercase tracking-[0.3em] text-cocoa">
               Founding Member Waitlist
             </p>
-            <h2 className="mt-3 font-display text-4xl font-bold leading-[1.05] tracking-tight sm:text-5xl">
-              Your whole body deserves better. Get it first.
+            <h2 className="mt-4 font-display text-4xl font-light leading-[1.08] tracking-tight sm:text-6xl">
+              Your whole body deserves better.{" "}
+              <em className="font-normal">Get it first.</em>
             </h2>
           </Reveal>
-          <div className="mt-10 space-y-6">
+          <div className="mt-12 space-y-8">
             {PERKS.map((perk, i) => (
               <Reveal key={perk.title} delay={i * 0.08}>
-                <div className="flex gap-4">
-                  <span className="mt-1 font-display text-xl font-bold text-periwinkle-deep">
-                    ~
-                  </span>
-                  <div>
-                    <h3 className="font-display text-lg font-bold text-ink">{perk.title}</h3>
-                    <p className="text-ink/65">{perk.copy}</p>
-                  </div>
+                <div className="border-l border-espresso/15 pl-6">
+                  <h3 className="font-display text-xl text-espresso">{perk.title}</h3>
+                  <p className="mt-1 text-cocoa">{perk.copy}</p>
                 </div>
               </Reveal>
             ))}
           </div>
         </div>
-        <Reveal delay={0.15} className="lg:pt-10">
-          <div className="rounded-3xl bg-cream p-6 shadow-xl shadow-ink/5 sm:p-10">
+        <Reveal delay={0.15} className="lg:pt-12">
+          <div className="rounded-3xl bg-cream/90 p-6 shadow-[0_40px_80px_-40px_rgba(69,57,49,0.35)] sm:p-10">
             <WaitlistForm source={source} />
           </div>
         </Reveal>
