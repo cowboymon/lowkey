@@ -12,11 +12,13 @@ export default function WaitlistForm({ source }: { source: string | null }) {
 
   if (state.status === "success" || state.status === "already") {
     return (
-      <div role="status" className="py-6 text-center">
+      <div role="status" className="text-center">
         <p className="font-display text-3xl text-ink">
           {state.status === "success" ? "Bodies body. Yours is in." : "Already in."}
         </p>
-        <p className="mt-4 text-lg leading-relaxed text-stone">{state.message}</p>
+        <p className="mx-auto mt-4 max-w-md text-lg leading-relaxed text-ink/70">
+          {state.message}
+        </p>
       </div>
     );
   }
@@ -34,7 +36,6 @@ export default function WaitlistForm({ source }: { source: string | null }) {
         }
         setClientError(null);
       }}
-      className="space-y-4"
     >
       {/* Campaign source from ?ref= — stored for attribution */}
       <input type="hidden" name="source" value={source ?? ""} />
@@ -45,8 +46,8 @@ export default function WaitlistForm({ source }: { source: string | null }) {
         <input id="company" type="text" name="company" tabIndex={-1} autoComplete="off" />
       </div>
 
-      <div>
-        <label htmlFor="email" className="mb-1.5 block text-sm font-medium text-ink/80">
+      <div className="flex flex-col gap-3 sm:flex-row">
+        <label htmlFor="email" className="sr-only">
           Email
         </label>
         <input
@@ -55,28 +56,25 @@ export default function WaitlistForm({ source }: { source: string | null }) {
           name="email"
           required
           autoComplete="email"
-          placeholder="you@example.com"
+          placeholder="you@email.com"
           aria-invalid={Boolean(clientError) || state.status === "error"}
           aria-describedby="email-feedback"
-          className="w-full rounded-2xl border border-ink/15 bg-white px-5 py-4 text-ink outline-none transition-colors placeholder:text-stone/40 focus:border-periwinkle-deep"
+          className="w-full flex-1 rounded-full bg-white px-6 py-4 text-ink outline-none ring-periwinkle-deep transition-shadow placeholder:text-stone/50 focus:ring-2"
         />
+        <button
+          type="submit"
+          disabled={pending}
+          className="shrink-0 rounded-full bg-ink px-8 py-4 font-medium tracking-wide text-cream transition-colors hover:bg-periwinkle-deep disabled:cursor-not-allowed disabled:opacity-60"
+        >
+          {pending ? "Adding you..." : "Notify me"}
+        </button>
       </div>
 
-      <p id="email-feedback" role="alert" className="min-h-5 text-sm font-medium text-red-800/80">
+      <p id="email-feedback" role="alert" className="mt-2 min-h-5 text-sm font-medium text-poppy">
         {clientError ?? (state.status === "error" ? state.message : "")}
       </p>
 
-      <button
-        type="submit"
-        disabled={pending}
-        className="w-full rounded-full bg-periwinkle-deep px-6 py-3 text-base font-medium tracking-wide text-cream transition-colors hover:bg-periwinkle-ink disabled:cursor-not-allowed disabled:opacity-60"
-      >
-        {pending ? "Adding you..." : "Count me in"}
-      </button>
-
-      <p className="text-center text-xs text-ink/60">
-        No spam, no oversharing. Just launch news and first-access perks.
-      </p>
+      <p className="text-sm text-ink/60">We&rsquo;ll email you once. Nothing else.</p>
     </form>
   );
 }
