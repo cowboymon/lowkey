@@ -5,7 +5,7 @@ import Reveal from "./Reveal";
  * Opening campaign block — ONE full-bleed photograph (~two viewports tall)
  * carrying both copy beats: the hero headline/CTA in the first viewport and
  * the "Some places sweat more than others." statement in the second.
- * Black & white treatment via CSS grayscale (delete the class for colour).
+ * Runs in colour (add a `grayscale` class to the Image for the B&W take).
  *
  * PLACEHOLDER imagery: licensed stock stand-in (Pexels, free licence)
  * matching the approved art direction — swap src for the brand's own
@@ -21,13 +21,13 @@ export default function Hero() {
         fill
         priority
         sizes="100vw"
-        className="-z-10 object-cover grayscale"
+        className="-z-10 object-cover object-[50%_35%] saturate-[1.15]"
       />
       {/* legibility scrim: one continuous gradient, darker under each copy
           beat, no hard edges */}
       <div
         aria-hidden
-        className="absolute inset-0 -z-10 bg-[linear-gradient(to_bottom,rgba(29,28,26,0.18),rgba(29,28,26,0.5)_46%,rgba(29,28,26,0.28)_66%,rgba(29,28,26,0.5))]"
+        className="absolute inset-0 -z-10 bg-[linear-gradient(to_bottom,rgba(29,28,26,0.1),rgba(29,28,26,0.38)_46%,rgba(29,28,26,0.2)_66%,rgba(29,28,26,0.42))]"
       />
 
       {/* beat one — hero */}

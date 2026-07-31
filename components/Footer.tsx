@@ -44,10 +44,10 @@ export default function Footer({ source }: { source: string | null }) {
           <div className="grid gap-x-8 gap-y-12 lg:grid-cols-12">
             <div className="lg:col-span-3">
               <Image
-                src="/brand/logo-stacked-periwinkle.png"
+                src="/brand/logo-stacked-plain.png"
                 alt="Low Key — Bio-balanced. Body Ready."
                 width={500}
-                height={330}
+                height={397}
                 className="w-32 sm:w-36"
               />
             </div>
