@@ -1,11 +1,11 @@
 import Image from "next/image";
 import WaitlistForm from "./WaitlistForm";
-import StudioBackdrop from "./StudioBackdrop";
 
 /**
- * Footer — same warm studio world as the rest of the site (no ocean
- * photograph). The vertical "LOW KEY" edge treatment echoes the debossed
- * wordmark running up the packaging concept's bottle.
+ * Kindred-style footer: full-bleed golden-hour ocean photograph with a
+ * floating frosted card — generous internal spacing, newsletter column
+ * widest. PLACEHOLDER imagery + menu links: pre-launch mock; swap image
+ * for campaign photography and links for real pages when they exist.
  */
 const COLUMNS = [
   {
@@ -31,16 +31,14 @@ export default function Footer({ source }: { source: string | null }) {
   return (
     <footer className="px-3 pb-3 pt-6 sm:px-5">
       <div className="relative overflow-hidden rounded-3xl px-4 py-16 sm:px-10 sm:py-24">
-        <StudioBackdrop />
-
-        {/* vertical wordmark edge device */}
-        <span
+        <Image
+          src="/footer-gold.jpg"
+          alt=""
           aria-hidden
-          className="absolute right-4 top-1/2 hidden -translate-y-1/2 whitespace-nowrap font-display text-xs font-medium uppercase tracking-[0.4em] text-ink/15 sm:right-6 sm:block"
-          style={{ writingMode: "vertical-rl" }}
-        >
-          Low Key ~ Bio-balanced. Body Ready.
-        </span>
+          fill
+          sizes="100vw"
+          className="-z-10 object-cover"
+        />
 
         <div className="mx-auto max-w-6xl rounded-2xl bg-cream/85 px-7 py-12 backdrop-blur-md sm:px-12 sm:py-14">
           <div className="grid gap-x-8 gap-y-12 lg:grid-cols-12">
