@@ -1,50 +1,33 @@
-import Image from "next/image";
 import Reveal from "./Reveal";
+import BottleMock from "./BottleMock";
+import StudioBackdrop from "./StudioBackdrop";
 
 /**
- * Opening campaign block — ONE full-bleed photograph (~two viewports tall)
- * carrying both copy beats: the hero headline/CTA in the first viewport and
- * the "Some places sweat more than others." statement in the second.
- * Runs in colour (add a `grayscale` class to the Image for the B&W take).
- *
- * PLACEHOLDER imagery: licensed stock stand-in (Pexels, free licence)
- * matching the approved art direction — swap src for the brand's own
- * campaign photograph when the shoot happens.
+ * Hero, reworked to match the approved packaging concept's world: warm
+ * neutral studio backdrop, soft single-direction daylight, product shown
+ * (not hidden) with colour living on the object. CSS-rendered bottle mocks
+ * stand in for the real renders — swap BottleMock for next/image the
+ * moment product photography exists.
  */
 export default function Hero() {
   return (
     <section id="top" className="relative mx-3 overflow-hidden rounded-3xl sm:mx-5">
-      {/* single continuous image behind both copy sections */}
-      <Image
-        src="/hero-skin.jpg"
-        alt="Sweat beading on the bare skin of a shoulder and back"
-        fill
-        priority
-        sizes="100vw"
-        className="-z-10 object-cover object-[50%_35%] grayscale"
-      />
-      {/* legibility scrim: one continuous gradient, darker under each copy
-          beat, no hard edges */}
-      <div
-        aria-hidden
-        className="absolute inset-0 -z-10 bg-[linear-gradient(to_bottom,rgba(29,28,26,0.1),rgba(29,28,26,0.38)_46%,rgba(29,28,26,0.2)_66%,rgba(29,28,26,0.42))]"
-      />
+      <StudioBackdrop />
 
-      {/* beat one — hero */}
-      <div className="flex min-h-[88svh] flex-col justify-end">
-        <div className="mx-auto w-full max-w-6xl px-5 pb-24 pt-32 sm:px-8 sm:pb-36">
+      <div className="mx-auto grid w-full max-w-6xl items-end gap-10 px-5 pb-16 pt-32 sm:px-8 sm:pb-24 lg:grid-cols-[1.2fr_0.8fr] lg:gap-6">
+        <div>
           <Reveal>
-            <p className="mb-5 text-sm font-medium uppercase tracking-[0.3em] text-white [text-shadow:0_1px_12px_rgba(29,28,26,0.5)]">
+            <p className="mb-5 text-sm font-medium uppercase tracking-[0.3em] text-cocoa">
               Bio-balanced. Body Ready.
             </p>
           </Reveal>
           <Reveal delay={0.1}>
-            <h1 className="max-w-3xl font-display text-5xl font-light leading-[1.02] tracking-tight text-cream sm:text-7xl lg:text-8xl">
+            <h1 className="max-w-2xl font-display text-5xl font-light leading-[1.02] tracking-tight text-ink sm:text-7xl lg:text-8xl">
               Not everything that sweats <em className="font-normal">wears deodorant.</em>
             </h1>
           </Reveal>
           <Reveal delay={0.2}>
-            <p className="mt-6 max-w-md text-lg leading-relaxed text-cream/85 sm:text-xl">
+            <p className="mt-6 max-w-md text-lg leading-relaxed text-cocoa sm:text-xl">
               The full-body deodorant made for your most sensitive skin&nbsp;—
               so you know it&rsquo;s safe everywhere else.
             </p>
@@ -53,32 +36,32 @@ export default function Hero() {
             <div className="mt-9">
               <a
                 href="#waitlist"
-                className="inline-block rounded-full bg-butter px-9 py-4 text-lg font-semibold tracking-wide text-ink transition-colors hover:bg-periwinkle hover:text-periwinkle-ink"
+                className="inline-block rounded-full bg-ink px-9 py-4 text-lg font-semibold tracking-wide text-cream transition-colors hover:bg-periwinkle-deep"
               >
                 Join the Waitlist
               </a>
             </div>
           </Reveal>
         </div>
+
+        <Reveal delay={0.2} className="mx-auto flex w-full max-w-[14rem] items-end justify-center gap-6 sm:max-w-xs">
+          <BottleMock variant="periwinkle" className="w-1/2" />
+          <BottleMock variant="blush" className="w-1/2 translate-y-4" />
+        </Reveal>
       </div>
 
-      {/* beat two — campaign statement, same photograph continuing */}
-      <div className="mx-auto max-w-3xl px-5 py-28 text-center sm:px-8 sm:py-40">
+      {/* beat two — campaign statement, same studio world continuing */}
+      <div className="relative mx-auto max-w-3xl px-5 py-28 text-center sm:px-8 sm:py-40">
         <Reveal>
-          <h2 className="font-display text-4xl font-light leading-[1.1] tracking-tight text-cream sm:text-6xl">
+          <h2 className="font-display text-4xl font-light leading-[1.1] tracking-tight text-ink sm:text-6xl">
             Some places sweat more than others.
           </h2>
         </Reveal>
         <Reveal delay={0.15}>
-          <p className="mx-auto mt-8 max-w-xl font-display text-xl italic leading-relaxed text-cream/85 sm:text-2xl">
+          <p className="mx-auto mt-8 max-w-xl font-display text-xl italic leading-relaxed text-cocoa sm:text-2xl">
             Traditional deodorant wasn&rsquo;t made for that.
             <br />
             Low Key was.
-          </p>
-        </Reveal>
-        <Reveal delay={0.25}>
-          <p className="mt-10 pb-4 text-sm uppercase tracking-[0.3em] text-butter">
-            Not just underarms
           </p>
         </Reveal>
       </div>

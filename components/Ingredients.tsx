@@ -37,10 +37,7 @@ export default function Ingredients() {
     <section id="how" className="px-5 py-28 sm:px-8 sm:py-36">
       <div className="mx-auto max-w-6xl">
         <Reveal>
-          <p className="text-sm font-medium uppercase tracking-[0.3em] text-periwinkle-deep">
-            How it works
-          </p>
-          <h2 className="mt-4 max-w-2xl font-display text-4xl font-light leading-[1.08] tracking-tight sm:text-6xl">
+          <h2 className="max-w-2xl font-display text-4xl font-light leading-[1.08] tracking-tight sm:text-6xl">
             Science, but make it gentle.
           </h2>
         </Reveal>

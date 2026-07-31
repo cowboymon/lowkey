@@ -29,10 +29,7 @@ export default function Faq() {
     <section id="faq" className="px-5 py-28 sm:px-8 sm:py-36">
       <div className="mx-auto max-w-3xl">
         <Reveal>
-          <p className="text-sm font-medium uppercase tracking-[0.3em] text-periwinkle-deep">
-            FAQ
-          </p>
-          <h2 className="mt-4 font-display text-4xl font-light leading-[1.08] tracking-tight sm:text-6xl">
+          <h2 className="font-display text-4xl font-light leading-[1.08] tracking-tight sm:text-6xl">
             Asking for a friend.
           </h2>
         </Reveal>

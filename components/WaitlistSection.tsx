@@ -10,10 +10,7 @@ export default function WaitlistSection({ source }: { source: string | null }) {
     <section id="waitlist" className="scroll-mt-32 px-3 sm:px-5">
       <div className="rounded-3xl bg-butter px-5 py-24 text-center sm:px-8 sm:py-36">
         <Reveal>
-          <p className="text-sm font-medium uppercase tracking-[0.3em] text-periwinkle-deep">
-            The Waitlist
-          </p>
-          <h2 className="mx-auto mt-4 max-w-3xl font-display text-4xl font-light leading-[1.05] tracking-tight sm:text-7xl">
+          <h2 className="mx-auto max-w-3xl font-display text-4xl font-light leading-[1.05] tracking-tight sm:text-7xl">
             Your whole body deserves better. Get it first.
           </h2>
         </Reveal>
