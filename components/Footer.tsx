@@ -10,7 +10,7 @@ export default function Footer() {
             src="/brand/logo-periwinkle.png"
             alt="Low Key"
             width={640}
-            height={133}
+            height={127}
             className="h-8 w-auto"
           />
           <a

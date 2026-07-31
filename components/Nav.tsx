@@ -30,10 +30,10 @@ export default function Nav() {
 
         <a href="#top" aria-label="Low Key — back to top" className="px-3">
           <Image
-            src="/brand/logo-periwinkle.png"
+            src="/brand/logo-white.png"
             alt="Low Key"
             width={640}
-            height={133}
+            height={127}
             className="h-6 w-auto sm:h-7"
             priority
           />
